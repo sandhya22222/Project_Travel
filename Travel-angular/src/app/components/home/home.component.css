@@ -1,0 +1,48 @@
+.border{
+    padding: 60px;
+    border-radius:15px;
+    background-color: #ffff;
+    height: 50%;
+    min-height: 250px;
+    margin-top: 5%;
+} 
+
+.offers{
+    padding: 10px;
+    border-radius:15px;
+    background-color:rgba(226, 92, 43, 0.85);
+    margin-top: 2%;
+   min-width: 150px;
+   right: 45%;
+    position: absolute;
+    min-height: 55px;
+    text-align: center;
+}
+
+.Places{
+    padding: 10px;
+    border-radius:15px;
+    background-color:rgba(226, 92, 43, 0.85);
+    margin-top: 2%;
+   min-width: 150px;
+   right: 45%;
+    position: absolute;
+    min-height: 55px;
+    text-align: center;
+} 
+
+
+
+.card:hover{
+    box-shadow: 5px 5px 5px rgb(211, 211, 213);
+    transform:scale(1);
+    cursor: pointer;
+}
+
+.btn-group{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 30px;
+}
+
+

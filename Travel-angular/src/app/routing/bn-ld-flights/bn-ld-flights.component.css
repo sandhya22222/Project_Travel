@@ -1,0 +1,25 @@
+.border{
+   
+    border-radius:15px;
+    background-color: skyblue;
+    height: 7%;
+    min-height: 50px;
+   margin-top: 1%;
+   width: 28%;
+  
+} 
+.body{
+    min-height: 50px;
+   
+}
+ /* wrapper, .split_combinedmc .airline-info-wrapper {
+    width: 300px;
+}
+.makeFlex {
+    display: flex;
+} */
+
+.align-items-center {
+    -ms-flex-align: center!important;
+    align-items: center!important;
+} 

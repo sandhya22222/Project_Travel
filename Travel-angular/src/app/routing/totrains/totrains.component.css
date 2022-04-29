@@ -1,0 +1,17 @@
+.border{
+  
+    border-radius:15px;
+    background-color: #ffff;
+    height: 40%;
+    min-height: 250px;
+    width: 70%;
+} 
+
+.box:hover{
+    box-shadow: 5px 5px 5px rgb(208, 208, 213);
+    transform:scale(1);
+    cursor: pointer;
+}
+.success{
+    font-size: 10px;
+}

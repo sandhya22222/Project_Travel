@@ -1,0 +1,117 @@
+<div style="background-color:rgba(228, 228, 221, 0.719)">
+
+  <div class="container">
+           <div style="text-align: center;">
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+      
+        <button class="btn btn-primary  btn-lg " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <img src="https://www.ixigo.com/rt-flight/pc/img/train-new.svg" style="width: 50px;">
+          <a href="/trains" style="text-decoration: none; color:white;"> Trains </a>
+
+        </button>
+
+        <button class="btn btn-success  btn-lg " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <img src="https://www.ixigo.com/rt-flight/pc/img/flight-new.svg" style="width: 50px;">
+          <a href="/flights" style="text-decoration: none; color:white;"> Flights </a>
+
+        </button>
+
+        <button class="btn btn-warning  btn-lg " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <img src="https://www.ixigo.com/rt-flight/pc/img/bus-new.svg" style="width: 50px;">
+          <a href="/buses" style="text-decoration: none; color:white;"> Buses </a>
+
+        </button>
+
+
+
+        <button class="btn btn-danger  btn-lg " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <img src="https://www.ixigo.com/rt-flight/pc/img/hotel-new.svg" style="width: 50px;">
+          <a href="/hotel" style="text-decoration: none; color:white;"> Hotels </a>
+
+        </button>
+
+        <button class="btn btn-secondary  btn-lg " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <img src="https://www.ixigo.com/rt-flight/pc/img/bus-new.svg"
+            style="width: 50px;">
+          <a href="/cabs" style="text-decoration: none; color:white;"> Cabs </a>
+
+        </button>
+
+
+      </div>
+    </div>
+    <br>
+    <!--Carousel Starts-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://img.freepik.com/free-vector/travel-tourism-illustration-with-resort-sightseeing-elements_1284-30189.jpg?size=626&ext=jpg&ga=GA1.1.609849508.1649337730"
+            class="d-block w-100" style="height: 500px;" alt="...">
+        </div>
+
+      </div>
+      <!--First Border-->
+      <div class="offers text-light">
+        <h3><b>offers</b></h3>
+      </div>
+      <div class="border">
+
+        <div class="row">
+
+          <div *ngFor="let myele of listItem" class="card col m-3 p-2">
+
+            <img src="{{myele.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+
+              <p class="card-text">{{myele.content}}</p>
+              <p class="card-text">{{myele.text}}</p>
+              <a target="_blank" href="#" class="btn btn-primary">{{myele.btnText}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Second Border -->
+
+      <div class="Places text-light">
+        <h3><b>Trending Places</b></h3>
+      </div>
+      <div class="border">
+        <!-- <div class="border border-secondary"> -->
+
+        <div class="row">
+
+          <div *ngFor="let myele of bestPlaces" class="card col m-3 p-2">
+
+            <img src="{{myele.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{myele.title}}</h5>
+
+
+              <a target="_blank" href="#" class="btn btn-primary">{{myele.btnText}}</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div *ngFor="let myele of  bestPlaces1" class="card col m-3 p-2">
+
+            <img src="{{myele.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{myele.title}}</h5>
+
+
+              <a target="_blank" href="#" class="btn btn-primary">{{myele.btnText}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
