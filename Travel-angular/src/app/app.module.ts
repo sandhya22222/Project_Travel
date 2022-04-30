@@ -24,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MytripsComponent } from './components/mytrips/mytrips.component';
 import { TotrainsComponent } from './routing/totrains/totrains.component';
 import { TrainclickComponent } from './routing/trainclick/trainclick.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { TrainclickComponent } from './routing/trainclick/trainclick.component';
     BrowserAnimationsModule,
     MaterialExampleModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

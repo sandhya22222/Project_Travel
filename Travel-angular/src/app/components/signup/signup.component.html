@@ -1,121 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
- <div class="wrapper">
+<img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Travel-Backgrounds-Download-HD.jpg" width="100%"
+    height="800px">
+<br><br><br><br>
 
-        <div class="registration_form">
-
-            <div class="title">
-
-                Registration Form
-
-            </div>
-
-            <form>
-
-                <div class="form_wrap">
-
-                    <div class="input_grp">
-
-                        <div class="input_wrap">
-
-                            <label for="fname"><b>First Name</b></label>
-
-                            <input type="text" id="fname">
-
-                        </div>
-
-                        <div class="input_wrap">
-
-                            <label for="lname"><b>Last Name</b></label>
-
-                            <input type="text" id="lname">
-
-                        </div>
-
-                    </div>
-
-                    <div class="input_wrap">
-
-                        <label for="email"><b>Email Address</b></label>
-
-                        <input type="text" id="email">
-
-                    </div>
-
-                    <div class="input_wrap">
-
-                        <label for="phone"><b>phone number</b> </label>
-
-                        <input type="text" id="phone">
-
-                    </div>
-
-
-
-
-
-                    <div class="input_wrap">
-
-                        <label><b>Gender</b></label>
-
-                        <ul>
-
-                            <li>
-
-                                <label class="radio_wrap">
-
-                                    <input type="radio" name="gender" value="male" class="input_radio" checked>
-
-                                    <span><b>Male</b></span>
-
-                                </label>
-
-                            </li>
-
-                            <li>
-
-                                <label class="radio_wrap">
-
-                                    <input type="radio" name="gender" value="female" class="input_radio">
-
-                                    <span><b>Female</b></span>
-
-                                </label>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="input_wrap">
-
-                        <label for="city"><b>City</b></label>
-
-                        <input type="text" id="city">
-
-                    </div>
-
-                    <div class="input_wrap">
-
-                        <label for="country"><b>Country</b></label>
-
-                        <input type="text" id="country">
-
-                    </div>
-
-                    <div class="input_wrap">
-
-                        <input type="submit" value="Register Now" class="submit_btn">
-
-                    </div>
-
+<div class="container border border-primary p-4 m-5">
+    <form #f="ngForm" novalidate>
+        <div class="row g-3">
+            <div class="col">
+                <label><b>First name</b></label>
+                <input type="fname" class="form-control" placeholder="First name" aria-label="First name" ngModel
+                    name="fname" #myFname="ngModel" required>
+                <div class="text-danger" *ngIf="myFname.touched && myFname.invalid">
+                    <b>*please enter a value</b>
                 </div>
-
-            </form>
-
+            </div>
+            <div class="col">
+                <label><b>Last name</b></label>
+                <input type="lname" class="form-control" placeholder="Last name" aria-label="Last name" ngModel
+                    name="lname" #myLname="ngModel" required>
+                <div class="text-danger" *ngIf="myLname.touched && myLname.invalid">
+                    <b>*please enter a value</b>
+                </div>
+            </div>
         </div>
-    </div>
+        <br>
+        <div class="mb-3">
+            <label><b>Phone Number</b></label>
+            <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1" ngModel name="phnnum"
+                #myphnnum="ngModel" required>
+            <div class="text-danger" *ngIf="myphnnum.touched && myphnnum.invalid">
+                <b>*please enter a number</b>
+            </div>
+        </div>
+        <div class="form-group">
+            <label><b>City</b></label>
+            <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option [value]="cities" *ngFor="let cities of cities">{{cities}}</option>
+            </select>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label><b>Email address</b></label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel
+                email="true" name="email" #myemail="ngModel" required>
+            <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
+                <b>*please enter a valid email</b>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label><b>Password</b></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" ngModel name="password" minlength="6"
+                #mypassword="ngModel" required>
+            <div class="text-danger" *ngIf="mypassword.touched && mypassword.invalid">
+                <b>Password must be at least 6 characters long</b>
+            </div>
+        </div>
+
+        <button [disabled] (click)="getValues()" class="btn btn-primary">Register</button>
+    </form>
+</div>
