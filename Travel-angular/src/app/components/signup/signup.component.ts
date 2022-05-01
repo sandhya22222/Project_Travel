@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
   getValues() {
     console.log(this.myform);
 
-    this.signService.getSignuplist(this.myform.value)
+    this.signService.getSignuplist(this.myform)
       .subscribe((data) => {
         console.log(data)
       })
