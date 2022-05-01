@@ -13,6 +13,7 @@ import { FlightsComponent } from './vehicals/flights/flights.component';
 import { HotelsComponent } from './vehicals/hotels/hotels.component';
 import { TrainsComponent } from './vehicals/trains/trains.component';
 import { TotrainsComponent } from './routing/totrains/totrains.component';
+import { FlightclickComponent } from './routing/flightclick/flightclick.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -38,7 +39,9 @@ const routes: Routes = [
 
   {path:'trains/search',component:TotrainsComponent},
 
-  { path: 'mytrips', component: MytripsComponent }
+  { path: 'mytrips', component: MytripsComponent },
+  
+  {path:'flightbook',component:FlightclickComponent}
 
 
 ];

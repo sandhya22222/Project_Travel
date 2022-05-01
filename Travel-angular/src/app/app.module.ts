@@ -25,6 +25,9 @@ import { MytripsComponent } from './components/mytrips/mytrips.component';
 import { TotrainsComponent } from './routing/totrains/totrains.component';
 import { TrainclickComponent } from './routing/trainclick/trainclick.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlightclickComponent } from './routing/flightclick/flightclick.component';
+import { SubmitComponent } from './routing/submit/submit.component';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +48,9 @@ import { HttpClientModule } from '@angular/common/http';
 
     MytripsComponent,
       TotrainsComponent,
-      TrainclickComponent
+      TrainclickComponent,
+      FlightclickComponent,
+      SubmitComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialExampleModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

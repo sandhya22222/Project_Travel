@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
+import{FlightclickComponent} from '../flightclick/flightclick.component';
+
 
 @Component({
   selector: 'app-bn-ld-flights',
@@ -51,12 +54,24 @@ export class BnLdFlightsComponent implements OnInit {
   ]
 
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,private myDilog:MatDialog) {
   }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((data) => this.flightL = data)
 
   }
+openDialog(){
+  const dilogref= this.myDilog
+  .open( FlightclickComponent,{
+    height:'600px',
+    width:'700px',
+    disableClose:true
+  });
 
+  dilogref.afterClosed().subscribe((result) => {
+    console.log(`Dialog result ${result}`);
+  })
+
+}
 }

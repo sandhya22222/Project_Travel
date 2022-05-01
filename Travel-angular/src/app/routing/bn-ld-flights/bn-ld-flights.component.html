@@ -1,87 +1,3 @@
-<!-- <div style="background-color: rgb(11, 11, 89);">
-    <div class="body" style="background-color:rgb(11, 11, 89) ;">
-        <div class="container" style="background-color: rgb(13, 13, 81); height: 20px; width: 60%;">
-            <br> <br> <br>
-            <h3 class="text-light" style="font-style:oblique;"><b>Bangalore -> London Flights</b></h3>
-            <h3>{{flightL| json}}</h3>
-
-
-            <div *ngFor="let myele of city " >
-              <h2>{{myele.cityName}}</h2>
-            </div> 
-            <br>
-            <form id="from" name="fromLocation1" ngModel #fromLocation="ngModel">
-                <h2 class="text-light">{{flightL.from}} {{flightL.to}}</h2>
-                <div class="border">
-                    <br>
-
-                    <div class=" container">
-
-                        <div class="form-check">
-
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                                style="margin-left: 15%; margin-top:6%">
-
-                            <label class="form-check-label" for="flexRadioDefault1" style="width: 80%;  margin-top:5%">
-
-                                <div class="container">
-                                    <button class="btn btn-success rounded-pill"
-                                            style="margin-left: 60%; margin-top:-20% ;width: 25%;">Select</button> 
-                                    <div *ngFor="let myele of city">
-                                        <h4>04:30</h4>
-                                        <p>{{flightL.from}}</p>
-
-                                        <div style="margin-left: 18%; margin-top:-8%">
-                                            <a style="border-top: 3px solid rgb(245, 166, 34);">
-                                                1 stop via Dubai
-                                            </a>
-                                            <h6 style="margin-left: 5%; margin-top:-8%">{{myele.fromtime}}</h6>
-                                            <h4 style="margin-left: 28%; margin-top:-6%">{{myele.totime}}</h4>
-                                            <p style="margin-left: 28%; margin-top:-2%">{{flightL.to}}</p>
-                                            <p style="margin-left: 28%; margin-top:-3%">Apt</p>
-                                        </div>
-
-                                        <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/EK.png?v=8"
-                                            width="7%" style="margin-left: -45% ;margin-top:-5%"> <p style="margin-left: -45%">
-                                            Emirates</p> 
-                                        <button class="btn btn-success rounded-pill"
-                                            style="margin-left: 60%; margin-top:-20% ;width: 25%;">Select</button>
-                                    </div>
-                                </div>
-                            </label>
-
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                                style="margin-left: 15%; margin-top:1%" checked>
-                            <label class="form-check-label" for="flexRadioDefault2" style="width: 80%;  margin-top:-2%">
-                                <div class="container">
-
-                                    <h4>04:30</h4>
-                                    <p>{{flightL.from}}</p>
-
-                                    <div style="margin-left: 18%; margin-top:-8%">
-                                        <a style="border-top: 3px solid rgb(245, 166, 34);">
-                                            1 stop via Dubai
-                                        </a>
-                                        <h6 style="margin-left: 5%; margin-top:-8%">12h 35m</h6>
-                                        <h4 style="margin-left: 28%; margin-top:-6%"></h4>
-                                        <p style="margin-left: 28%; margin-top:-3%">Apt</p>
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-            </form>
-        </div>
-
-
-    </div>
-</div>  -->
-
 <img src="https://img.freepik.com/free-vector/time-travel-vector-flyer-with-white-copy-space-sky-with-airplane_134830-1061.jpg?size=626&ext=jpg&ga=GA1.1.609849508.1649337730"
     style="background-size: cover; width:100%; height: 400px;">
 
@@ -89,7 +5,7 @@
     <h3 class="text-dark container" style="text-align:center;">{{flightL.from}} ---> {{flightL.to}}</h3>
 </div>
 <br><br>
-<div class="border container" style="min-height: 950px; width: 80%; background-color:beige;">
+<!-- <div class="border container" style="min-height: 950px; width: 80%; background-color:beige;"> -->
     <br> <br>
     <div *ngFor="let myele of city">
         <div class="border container" style="border-radius:15px; background-color:skyblue;  height:120px; width: 60%;">
@@ -104,11 +20,12 @@
             <h4 style="top:-107%;left:68%;position:relative">{{myele.totime}}</h4>
             <p style="top:-110%;left:70%;position:relative">{{flightL.to}}</p>
 
-            <button class="btn btn-success rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                style="top:-170%;left:85%;position:relative">
-                <a href="/#" style="text-decoration: none; color:white;"> Book </a>
-            </button>
-
+            <!-- <button class="btn btn-success rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                style="top:-170%;left:85%;position:relative;width: 10%;">
+                <a href="/flightbook" style="text-decoration: none; color:white;"> Book </a>
+            </button> -->
+              <button mat-button (click)="openDialog()" class="btn btn-success rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+              style="top:-170%;left:85%;position:relative;width: 10%;">Book</button>
         </div>
     </div>
-</div>
+<!-- </div> -->
