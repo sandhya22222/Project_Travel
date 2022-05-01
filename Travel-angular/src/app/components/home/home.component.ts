@@ -11,14 +11,14 @@ export class HomeComponent implements OnInit {
     content: 'Get up to Rs. 7500 OFF on  Europe  Flights',
     btnText: 'Book Now!',
     image: 'https://gos3.ibcdn.com/top-band-1649346190.jpg',
-   
+   href:'/flights/search?from=New%20Delhi&to=Goa'
   },
   {
     text:'Valid till:Valid Till 12th April',
     content: 'New Flights: Port Blair, Kolkata and Chennai ',
     btnText: 'Book Now!',
     image: 'https://gos3.ibcdn.com/offers-640X268-1646049604.jpg',
-   
+   href:'/flights/search?from=Mumbai&to=Chennai'
   },
   {
     text:'Valid till:Valid Till 25th May',
