@@ -27,6 +27,7 @@ import { TrainclickComponent } from './routing/trainclick/trainclick.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlightclickComponent } from './routing/flightclick/flightclick.component';
 import { SubmitComponent } from './routing/submit/submit.component';
+import { TohotelsComponent } from './routing/tohotels/tohotels.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { SubmitComponent } from './routing/submit/submit.component';
       TotrainsComponent,
       TrainclickComponent,
       FlightclickComponent,
-      SubmitComponent
+      SubmitComponent,
+      TohotelsComponent
   ],
   imports: [
     BrowserModule,

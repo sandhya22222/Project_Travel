@@ -9,8 +9,9 @@
 <div *ngFor="let trainl of trains">
     <br>
     <div class="border border-secondary container">
+      
         <div class="row">
-
+                        
             <h4 style="margin-top: 2%;"><b>{{trainl.trainname}}</b></h4>
             <p style="margin-left: 43%; margin-top: -4%;"><b>{{trainl.fromtime}}</b></p>
             <p style="margin-left: 43%; margin-top: -2%;">{{trainL.from}}</p>
@@ -21,19 +22,22 @@
             <br><br><br><br>
 
             <div class="box border" style="width:20% ; height: 10px; min-height: 120px; left:3%;position: relative;">
-
+                
                 <b>{{trainl.ffboxin}}
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     {{trainl.ffcost}}</b>
-                <h6 class="text-success">{{trainl.ffavailable}}</h6>
+                <h6 [routerLink]="['/trainclick']" mat-tab-group mat-align-tabs= 'start' class="text-success">{{trainl.ffavailable}}</h6>
                 <br>
                 <a>{{trainl.fsfree}}</a>
             </div>
+            
+            
             <div class="box border" style="width:20% ; height: 10px; min-height: 120px; left:7%;position: relative;">
                 <b> {{trainl.fsboxin}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     {{trainl.fscost}}</b>
 
-                <h6 class="text-warning">{{trainl.fsavailable}}</h6>
+                <h6 [routerLink]="['/trainclick']" mat-tab-group mat-align-tabs= 'start' class="text-warning">{{trainl.fsavailable}}</h6>
+                <!-- <p [routerLink]="['/trainclick']" mat-tab-group mat-align-tabs= 'start' class="order-title"></p> -->
                 <br>
                 <a>{{trainl.fsfree}}</a>
             </div>
@@ -41,7 +45,7 @@
                 <b> {{trainl.ftboxin}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     {{trainl.ftcost}}</b>
 
-                <h6 class="text-warning">{{trainl.ftavailable}}</h6>
+                <h6 [routerLink]="['/trainclick']" mat-tab-group mat-align-tabs= 'start' class="text-warning">{{trainl.ftavailable}}</h6>
                 <br>
                 <a>{{trainl.fsfree}}</a>
             </div>
@@ -49,7 +53,7 @@
                 <b> {{trainl.ffoboxin}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     {{trainl.ffocost}}</b>
 
-                <h6 class="text-danger">{{trainl.ffoavailable}}</h6>
+                <h6 [routerLink]="['/trainclick']" mat-tab-group mat-align-tabs= 'start' class="text-danger">{{trainl.ffoavailable}}</h6>
                 <br>
                 <a>{{trainl.fsfree}}</a>
             </div>

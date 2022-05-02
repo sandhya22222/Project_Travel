@@ -1,0 +1,21 @@
+<img src="https://img.freepik.com/free-photo/panorama-chic-five-star-hotel-with-pool-sands-katathani-evening-order-palm-trees-green-grass-vacation-spot_114160-176.jpg?size=626&ext=jpg&ga=GA1.2.609849508.1649337730"
+    width="100%" height="450px">
+<br><br>
+<div *ngFor="let myele of hotellist">
+    <div class="container card mb-3" style="max-width: 800px; height: 200px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={{myele.img}} class="img p-3" alt="...">
+
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
