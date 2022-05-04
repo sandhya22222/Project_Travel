@@ -10,14 +10,15 @@
                             <div class="col-md-2">
 
                                 <label for="inputState" class="form-label">
-                                    <h5 style="margin-left:150px;"><b>FROM</b></h5>
+                                    <h5 style="margin-left:150px;"><b>CITY</b></h5>
                                 </label>
 
                                 <mat-form-field appearance="fill" style="top:17%;left: 70%">
                                     <mat-label>Select an option</mat-label>
-                                    <mat-select disableRipple id="from" name="fromLocation" ngModel #fromL="ngModel">
+                                    <mat-select disableRipple id="from" name="fromLocation" ngModel #cityL="ngModel">
                                         <mat-option value="Bangalore" id="1">Bangalore</mat-option>
                                         <mat-option value="Hyderabad" id="2">Hyderabad</mat-option>
+                                        <mat-option value="Mumbai" id="2">Mumbai</mat-option>
                                         <mat-option value="Pune" id="3">Pune</mat-option>
                                         <mat-option value="New Delhi" id="3">New Delhi</mat-option>
                                         <mat-option value="chennai" id="3">chennai</mat-option>
@@ -70,7 +71,7 @@
 
                         <button class="btn btn-primary  btn-lg  rounded-pill" type="button" aria-expanded="false"
                             style="left: 40%;position: relative; margin-top: 1%;width: 11%;height: 50px;">
-                            <a [routerLink]="['/hotel/search']" [queryParams]="{ from:fromL.value}"
+                            <a [routerLink]="['/hotel/search']" [queryParams]="{ city:cityL.value}"
                                 style="text-decoration: none; color:white;">
                                 <b> Search </b></a>
                         </button>

@@ -16,9 +16,11 @@ import { TotrainsComponent } from './routing/totrains/totrains.component';
 import { FlightclickComponent } from './routing/flightclick/flightclick.component';
 import { TohotelsComponent } from './routing/tohotels/tohotels.component';
 import { TrainclickComponent } from './routing/trainclick/trainclick.component';
+import { HotelclickComponent } from './routing/hotelclick/hotelclick.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  
   { path: 'Login', component: LoginComponent },
 
   { path: 'Contact', component: ContactUsComponent },
@@ -40,13 +42,16 @@ const routes: Routes = [
   { path: 'flights/search', component: BnLdFlightsComponent },
 
   { path: 'trains/search', component: TotrainsComponent },
-  {path:'trainclick',component:TrainclickComponent},
+
+  { path: 'trainclick', component: TrainclickComponent },
 
   { path: 'mytrips', component: MytripsComponent },
 
   { path: 'flightbook', component: FlightclickComponent },
 
-  { path: 'hotel/search', component: TohotelsComponent }
+  { path: 'hotel/search', component: TohotelsComponent },
+
+  { path: 'hotelclick', component: HotelclickComponent }
 ];
 
 @NgModule({

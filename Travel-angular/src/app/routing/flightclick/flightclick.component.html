@@ -43,20 +43,33 @@
                 <b>*please enter a valid email</b>
             </div>
         </div>
-        <div class="mb-3">
-            <label><b>Passengers</b></label>
-            <input type="number" class="form-control" id="exampleInputNumber1" ngModel name="number"
-                #mynumber="ngModel" required>
-            <div class="text-danger" *ngIf="mynumber.touched && mynumber.invalid">
-                <b>*please enter a number</b>
+        <div class="row g-3">
+            <div class="mb-3 col">
+                <label><b>Passengers</b></label>
+                <input type="number" class="form-control" id="exampleInputNumber1" ngModel #passengers #number="ngModel"
+                    required>
+                <div class="text-danger" *ngIf="number.touched && number.invalid">
+                    <b>*please enter a number</b>
+                </div>
+            </div>
+            <div class="col">
+                <label><b>Amount</b></label>
+                <div>
+                    <button class="btn btn-secondary" (click)="getAmount()">Get Amount </button>
+                </div>
             </div>
         </div>
-      
+        <!-- <button [disabled] (click)="setValues()" class="btn btn-primary">Set Values</button> -->
+        <div>
+            <span>Amount to be paid</span>
+            &nbsp;&nbsp;<button class="btn btn-success">{{amount}}</button>
+                
+        </div>
         <button [disabled] (click)="getValues()" class="btn btn-primary">Submit</button>
-        
+
         <mat-dialog-actions align="end">
             <button mat-button mat-dialog-close class="btn btn-primary">Cancel</button>
-          </mat-dialog-actions>
-     
+        </mat-dialog-actions>
+
     </form>
 </div>

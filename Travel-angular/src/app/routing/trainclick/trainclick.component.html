@@ -36,8 +36,8 @@
         </div>
         <div class="col-4">
             <label>Mobile Number</label>
-            <input type="number" class="form-control" placeholder="Enter Mobile Number" aria-label="Last name" ngModel
-                name="lname" #myLname="ngModel" required>
+            <input type="mobile number" class="form-control" placeholder="Enter Mobile Number" aria-label="Last name"
+                ngModel name="lname" #myLname="ngModel" required>
             <div class="text-danger" *ngIf="myLname.touched && myLname.invalid">
                 <b>*please enter a value</b>
             </div>
@@ -117,19 +117,31 @@
         </div>
     </div>
     <br><br>
+    <h5>Passangers</h5>
+    <br>
+    <div class="form-check col-4">
+        <input type="number" class="form-control" id="exampleInputNumber1" ngModel #passengers #number="ngModel"
+            required>
+        <div class="text-danger" *ngIf="number.touched && number.invalid">
+            <b>*please enter a number</b>
+        </div>
+    </div>
+
+    <br><br>
     <h5>Payment</h5>
     <br>
     <div class="form-check m-2">
         <input class="form-check-input" type="radio" name="flexRadio3" id="flexRadio1" checked>
         <label class="form-check-label" for="flexRadio">
-           Credit Card
+            Credit Card
         </label>
     </div>
-    
+
     <div class="form-check m-2">
         <input class="form-check-input" type="radio" name="flexRadio3" id="flexRadioChecked2">
         <label class="form-check-label" for="flexRadioChecked">
             debit Card
         </label>
     </div>
+
 </div>
