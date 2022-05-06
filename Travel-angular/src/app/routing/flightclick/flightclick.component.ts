@@ -6,19 +6,13 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./flightclick.component.css']
 })
 export class FlightclickComponent implements OnInit {
+  calculateAmount = 0;
+  isGetAmtClicked = false;
+  passengers: number = 1;
 
-  //  passengers:number =2
-   @ViewChild('passengers') nameKey!: ElementRef
+  ticketPrize: number = 1000;
 
-  public plist: number =5
-
-   ticketPrize: number = 1000;
-  
-  // public passengers:number |any;
- 
-  
-
-constructor() { }
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -26,16 +20,9 @@ constructor() { }
 
   }
   getAmount() {
-    // alert("Amount to be paid")
-    sessionStorage.setItem("passengers", this.nameKey.nativeElement.value)
+
+    this.isGetAmtClicked = true;
+
+    this.calculateAmount = this.passengers * this.ticketPrize
   }
-  amount: number = this.ticketPrize * this.plist;
- 
-  // setValues() {
-  //   this.plist = sessionStorage.getItem("plist")
-  // }
-
- 
-
-
 }

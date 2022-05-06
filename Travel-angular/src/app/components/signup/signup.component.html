@@ -2,60 +2,74 @@
     height="800px">
 <br><br><br><br>
 
+
+
 <div class="container border border-primary p-4 m-5">
     <form #f="ngForm" novalidate>
-        <div class="row g-3">
-            <div class="col">
-                <label><b>First name</b></label>
-                <input type="fname" class="form-control" placeholder="First name" aria-label="First name" ngModel
-                    name="fname" #myFname="ngModel" required>
-                <div class="text-danger" *ngIf="myFname.touched && myFname.invalid">
-                    <b>*please enter a value</b>
-                </div>
-            </div>
-            <div class="col">
-                <label><b>Last name</b></label>
-                <input type="lname" class="form-control" placeholder="Last name" aria-label="Last name" ngModel
-                    name="lname" #myLname="ngModel" required>
-                <div class="text-danger" *ngIf="myLname.touched && myLname.invalid">
-                    <b>*please enter a value</b>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="mb-3">
-            <label><b>Phone Number</b></label>
-            <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1" ngModel name="phnnum"
-                #myphnnum="ngModel" required>
-            <div class="text-danger" *ngIf="myphnnum.touched && myphnnum.invalid">
-                <b>*please enter a number</b>
-            </div>
-        </div>
         <div class="form-group">
-            <label><b>City</b></label>
-            <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option [value]="cities" *ngFor="let cities of cities">{{cities}}</option>
-            </select>
-        </div>
-        <br>
-        <div class="mb-3">
-            <label><b>Email address</b></label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel
-                email="true" name="email" #myemail="ngModel" required>
-            <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
-                <b>*please enter a valid email</b>
+            {{isUserAdded}}
+            <div *ngIf="isUserAdded">
+                ***User has been added succesffuly***
             </div>
-        </div>
-        <div class="mb-3">
-            <label><b>Password</b></label>
-            <input type="password" class="form-control" id="exampleInputPassword1" ngModel name="password" minlength="6"
-                #mypassword="ngModel" required>
-            <div class="text-danger" *ngIf="mypassword.touched && mypassword.invalid">
-                <b>Password must be at least 6 characters long</b>
+            <div class="row g-3">
+                <div class="col">
+                    <label><b>First name</b></label>
+                    <input type="fname" class="form-control" placeholder="First name" aria-label="First name" ngModel
+                        name="fname" #myFname="ngModel" required>
+                    <div class="text-danger" *ngIf="myFname.touched && myFname.invalid">
+                        <b>*please enter a value</b>
+                    </div>
+                </div>
+                <div class="col">
+                    <label><b>Last name</b></label>
+                    <input type="lname" class="form-control" placeholder="Last name" aria-label="Last name" ngModel
+                        name="lname" #myLname="ngModel" required>
+                    <div class="text-danger" *ngIf="myLname.touched && myLname.invalid">
+                        <b>*please enter a value</b>
+                    </div>
+                </div>
             </div>
-        </div>
+            <br>
+            <div class="mb-3">
+                <label><b>Phone Number</b></label>
+                <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1" ngModel name="phnnum"
+                    #myphnnum="ngModel" required>
+                <div class="text-danger" *ngIf="myphnnum.touched && myphnnum.invalid">
+                    <b>*please enter a number</b>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label><b>City</b></label>
+                <input type="cities" class="form-control" id="exampleInputCity1" ngModel name="city" #mycity="ngModel"
+                    required>
+                <div class="text-danger" *ngIf="mycity.touched && mycity.invalid">
+                    <b>*please enter a number</b>
+                </div>
+            </div>
 
-        <button [disabled] (click)="getValues()" class="btn btn-primary">Register</button>
+            <!-- <div class="text-danger" *ngIf="mycity.touched && mycity.invalid">
+                <b>*please enter a number</b>
+            </div> -->
+
+            <br>
+            <div class="mb-3">
+                <label><b>Email address</b></label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel
+                    email="true" name="email" #myemail="ngModel" required>
+                <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
+                    <b>*please enter a valid email</b>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label><b>Password</b></label>
+                <input type="password" class="form-control" id="exampleInputPassword1" ngModel name="password"
+                    minlength="6" #mypassword="ngModel" required>
+                <div class="text-danger" *ngIf="mypassword.touched && mypassword.invalid">
+                    <b>Password must be at least 6 characters long</b>
+                </div>
+            </div>
+
+            <button [disabled] (click)="getFormsValue(f)" class="btn btn-primary">Register</button>
+        </div>
     </form>
 </div>
