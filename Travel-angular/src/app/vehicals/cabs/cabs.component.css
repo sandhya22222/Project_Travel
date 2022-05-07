@@ -1,13 +1,18 @@
-.border{
-  
-    border-radius:15px;
+.border {
+
+    border-radius: 15px;
     background-color: #ffff;
-    height: 50%;
+    height: 40%;
     min-height: 250px;
-  
-} 
-.body{
-    min-height: 400px;
-   
+
 }
 
+.body {
+    min-height: 350px;
+
+}
+
+.example{
+   top:15%;
+   position: absolute;
+}

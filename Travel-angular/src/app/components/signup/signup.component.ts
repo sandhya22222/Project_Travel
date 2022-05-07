@@ -28,7 +28,7 @@ export class SignupComponent implements OnInit {
     firstname: formRef.value.fname,
     lastname: formRef.value.lname,
     email: formRef.value.email,
-    phone_num:formRef.value.phnnum,
+    phonenumber:formRef.value.phnnum,
     password: formRef.value.password,
     city:formRef.value.city,
       // job_title: formRef.value['my-langs'],

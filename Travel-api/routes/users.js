@@ -24,7 +24,7 @@ router.post('/signup', function (req, res, next) {
     firstname,
     lastname,
     email,
-    phone_num,
+    phonenumber,
     password,
     city
     // create_datetime,
@@ -32,8 +32,8 @@ router.post('/signup', function (req, res, next) {
 
 
   let insert_query = `INSERT INTO signup
-            (firstname,lastname, email,phone_num, password,city)
-             VALUES ('${firstname}','${lastname}','${email}','${phone_num}', '${password}', '${city}')`;
+            (firstname,lastname, email,phonenumber, password,city)
+             VALUES ('${firstname}','${lastname}','${email}','${phonenumber}', '${password}', '${city}')`;
 
   dbConnection.query(insert_query, (error, result, fields) => {
 
@@ -69,7 +69,7 @@ router.post('/login', (req, res, next) => {
         res.json(result)
       } else {
         // res.send(`{message: 'user no found', usercount: 0}`);
-        res.json({message: 'user not found', usercount: 0})
+        res.json({ message: 'user not found', usercount: 0 })
       }
     }
 
@@ -98,4 +98,4 @@ router.delete('/delete-user/:firstname', (req, res, next) => {
   });
 
 });
-  module.exports = router;
+module.exports = router;

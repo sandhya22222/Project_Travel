@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <button [disabled] (click)="getFormsValue(f)" class="btn btn-primary">Register</button>
+            <a (click)="getFormsValue(f)" class="btn btn-primary" [routerLink]="['/Login']">Register</a>
         </div>
     </form>
 </div>
