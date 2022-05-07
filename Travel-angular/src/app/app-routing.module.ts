@@ -17,6 +17,7 @@ import { FlightclickComponent } from './routing/flightclick/flightclick.componen
 import { TohotelsComponent } from './routing/tohotels/tohotels.component';
 import { TrainclickComponent } from './routing/trainclick/trainclick.component';
 import { HotelclickComponent } from './routing/hotelclick/hotelclick.component';
+import { TobusesComponent } from './routing/tobuses/tobuses.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -42,6 +43,8 @@ const routes: Routes = [
   { path: 'flights/search', component: BnLdFlightsComponent },
 
   { path: 'trains/search', component: TotrainsComponent },
+
+  {path:'buses/search',component:TobusesComponent},
 
   { path: 'trainclick', component: TrainclickComponent },
 

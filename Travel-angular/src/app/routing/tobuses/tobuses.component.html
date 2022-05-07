@@ -1,0 +1,45 @@
+<img src="https://live.staticflickr.com/8071/8398918307_8c45288e25_b.jpg"
+    style="background-size: cover; width:100%; height: 400px;">
+<br>
+
+<div class="border container"
+    style="border-radius:15px;background-color: rgb(155, 135, 235);height: 7%;min-height: 50px;margin-top: 1.5%;width: 28%;">
+    <h3 class="text-dark container" style="text-align:center;">{{busL.from}} ---> {{busL.to}}</h3>
+</div>
+<br><br>
+<div *ngFor="let busl of buses">
+    <br>
+    <div class="border border-secondary container">
+
+        <div class="row">
+            <h4 class="busename"><b>{{busl.busname}}</b></h4>
+            <p class="start">{{busl.start}}</p>
+
+            <h4 class="cost"><b>{{busl.bcost}}</b></h4>
+            <p class="pline">{{busl.pline}} </p>
+
+
+            <button class="btn btn-primary  btn-lg  rounded-pill" type="button" aria-expanded="false"
+                style="left: 80%;position: relative; margin-top: 1.5%;width: 10%;height: 45px;">
+                <b> Select </b>
+
+            </button>
+
+            <p class="fromtime"><b>{{busl.fromtime}}</b></p>
+
+            <!-- <p style="margin-left: 43%; margin-top: -1%;">{{busL.from}}</p> -->
+            <a class="line">{{busl.way}}</a>
+
+            <p class="time"><b>{{busl.totime}}</b></p>
+            <!-- <p style="margin-left: 70%; margin-top: -3.5%;">{{busL.to}}</p> -->
+
+
+            <!-- <br><br><br><br> -->
+            <img src="https://jsak.mmtcdn.com/bus_cdn_dt/static/media/ic-gps.704f79e1.svg">
+            <p class="track">{{busl.track}} </p>
+            <!-- <img src="https://jsak.mmtcdn.com/bus_cdn_dt/static/media/ic-free-cancel.87fdadda.svg" class="img1"> -->
+            <!-- <p class="start" >{{busl.start}} </p> -->
+
+            <p class="free">{{busl.free}}</p>
+
+

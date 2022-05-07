@@ -44,11 +44,8 @@
             </div>
         </div>
         <div class="row g-3">
-
             <div class="mb-3 col">
-
                 <label><b>Passengers</b></label>
-
                 <input type="number" class="form-control" id="exampleInputNumber1" name="passengers_nm"
                     [(ngModel)]="passengers" required>
 
@@ -57,34 +54,21 @@
                     <b>*please enter a number</b>
 
                 </div> -->
-
             </div>
             <div class="col">
-
                 <label><b>Amount</b></label>
-
                 <div>
-
                     <button class="btn btn-secondary" (click)="getAmount()">Get Amount </button>
-
                 </div>
-
             </div>
         </div>
 
         <!-- <button [disabled] (click)="setValues()" class="btn btn-primary">Set Values</button> -->
-
         <div *ngIf="isGetAmtClicked">
-
             <span>Amount to be paid</span>
-
             &nbsp;&nbsp;<button class="btn btn-success">{{calculateAmount}}</button>
-
-
-
         </div>
         <button [disabled] (click)="getValues()" class="btn btn-primary">Submit</button>
-
         <mat-dialog-actions align="end">
             <button mat-button mat-dialog-close class="btn btn-primary">Cancel</button>
         </mat-dialog-actions>
