@@ -7,3 +7,12 @@
     min-height: 100px;
     width: 66%;
 }
+
+.color{
+    background-color: yellow
+}
+
+.amount{
+    margin-top: -5%;
+    position: absolute;
+}

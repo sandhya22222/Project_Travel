@@ -54,24 +54,24 @@ export class BnLdFlightsComponent implements OnInit {
   ]
 
 
-  constructor(private route: ActivatedRoute,private myDilog:MatDialog) {
+  constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((data) => this.flightL = data)
 
   }
-openDialog(){
-  const dilogref= this.myDilog
-  .open( FlightclickComponent,{
-    height:'600px',
-    width:'700px',
-    disableClose:true
-  });
+// openDialog(){
+//   const dilogref= this.myDilog
+//   .open( FlightclickComponent,{
+//     height:'600px',
+//     width:'700px',
+//     disableClose:true
+//   });
 
-  dilogref.afterClosed().subscribe((result) => {
-    console.log(`Dialog result ${result}`);
-  })
+//   dilogref.afterClosed().subscribe((result) => {
+//     console.log(`Dialog result ${result}`);
+//   })
 
 }
-}
+

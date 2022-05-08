@@ -10,14 +10,14 @@ export class FlightclickComponent implements OnInit {
   isGetAmtClicked = false;
   passengers: number = 1;
 
-  ticketPrize: number = 1000;
+  ticketPrize: number = 5000;
 
   constructor() { }
 
   ngOnInit(): void {
   }
   getValues() {
-
+     alert("Payment done successfully")
   }
   getAmount() {
 

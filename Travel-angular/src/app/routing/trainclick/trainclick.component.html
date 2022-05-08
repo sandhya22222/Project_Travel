@@ -28,17 +28,17 @@
     <div class="row g-3">
         <div class="col-4">
             <label>Email id</label>
-            <input type="email" class="form-control" placeholder="Enter email id" ngModel email="true" name="fname"
-                #myFname="ngModel" required>
-            <div class="text-danger" *ngIf="myFname.touched && myFname.invalid">
+            <input type="email" class="form-control" placeholder="Enter email id" ngModel email="true" name="email"
+                #myemail="ngModel" required>
+            <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
                 <b>*please enter a value</b>
             </div>
         </div>
         <div class="col-4">
             <label>Mobile Number</label>
-            <input type="mobile number" class="form-control" placeholder="Enter Mobile Number" aria-label="Last name"
-                ngModel name="lname" #myLname="ngModel" required>
-            <div class="text-danger" *ngIf="myLname.touched && myLname.invalid">
+            <input type="mobile number" class="form-control" placeholder="Enter Mobile Number"
+                aria-label="mobile number" ngModel name="myphnnum" #myphnnum="ngModel" required>
+            <div class="text-danger" *ngIf="myphnnum.touched && myphnnum.invalid">
                 <b>*please enter a value</b>
             </div>
         </div>
@@ -116,32 +116,69 @@
             </label>
         </div>
     </div>
-    <br><br>
-    <h5>Passangers</h5>
     <br>
-    <div class="form-check col-4">
-        <input type="number" class="form-control" id="exampleInputNumber1" ngModel #passengers #number="ngModel"
-            required>
-        <div class="text-danger" *ngIf="number.touched && number.invalid">
-            <b>*please enter a number</b>
-        </div>
-    </div>
-
-    <br><br>
     <h5>Payment</h5>
-    <br>
-    <div class="form-check m-2">
+
+    <div class="form-check m-2 mb-3">
         <input class="form-check-input" type="radio" name="flexRadio3" id="flexRadio1" checked>
         <label class="form-check-label" for="flexRadio">
             Credit Card
         </label>
     </div>
 
-    <div class="form-check m-2">
+    <div class="form-check m-2 mb-3">
         <input class="form-check-input" type="radio" name="flexRadio3" id="flexRadioChecked2">
         <label class="form-check-label" for="flexRadioChecked">
             debit Card
         </label>
     </div>
+
+    <br>
+    <div class="mb-3">
+        <div class="row g-3 col-4">
+            <div class="col">
+                <label><b>Card Nmuber</b></label>
+                <input type="cardnumber" class="form-control" placeholder="Card Nmuber" aria-label="Card Nmuber"
+                    ngModel name="cardn" #cardn="ngModel" required>
+                <div class="text-danger" *ngIf="cardn.touched && cardn.invalid">
+                    <b>*please enter a value</b>
+                </div>
+            </div>
+            <div class="col-4">
+                <label><b>CVV</b></label>
+                <input type="password" class="form-control" placeholder="cvv" aria-label="cvvn" ngModel
+                    name="cvvn" #cvvn="ngModel" required>
+                <div class="text-danger" *ngIf="cvvn.touched && cvvn.invalid">
+                    <b>*please enter a value</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <h5>Passangers</h5>
+    <br>
+    <div class="row g-3">
+        <div class="mb-3 col-3">
+
+            <input type="number" class="form-control" id="exampleInputNumber1" name="passengers_nm"
+                [(ngModel)]="passengers" required>
+        </div>
+        <div class="col">
+            <!-- <label class="amount"><b>Amount</b></label> -->
+            <div>
+                <button class="btn btn-secondary" (click)="getAmount()">Get Amount</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isGetAmtClicked">
+        <span class="color"> <b>Amount to be Paid</b></span>
+        &nbsp;&nbsp;<button class="btn btn-success">{{calculateAmount}}</button>
+    </div>
+
+    <br>
+   
+    <button [disabled] (click)="getValues()" class="btn btn-primary btn-lg">Pay</button>
 
 </div>

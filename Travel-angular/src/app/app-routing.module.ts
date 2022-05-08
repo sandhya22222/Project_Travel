@@ -52,6 +52,8 @@ const routes: Routes = [
 
   { path: 'trainclick', component: TrainclickComponent },
 
+  {path:'flightclick',component:FlightclickComponent},
+
   { path: 'mytrips', component: MytripsComponent },
 
   { path: 'flightbook', component: FlightclickComponent },
