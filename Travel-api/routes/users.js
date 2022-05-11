@@ -4,18 +4,12 @@ var router = express.Router();
 /* GET users listing. */
 let dbConnection = require('./../db/db').localConnect();
 router.get('/', function (req, res, next) {
-  // res.send('respond with a resource')
+ 
   dbConnection.query('select * from signup', (error, results, fields) => {
     if (error) throw error;
     res.send(results)
   })
 });
-// router.post('/signup', function (req, res, next) {
-//   console.log(req.body);
-
-//   res.send('Registered Successfully');
-// })
-
 //signup database connection
 
 router.post('/signup', function (req, res, next) {
@@ -79,23 +73,55 @@ router.post('/login', (req, res, next) => {
 });
 
 
-router.delete('/delete-user/:firstname', (req, res, next) => {
-  let firstname = req.params.firstname;
-  let deleletq = `DELETE FROM signup WHERE firstname = '${firstname}'`;
+router.post('/flightclick', function (req, res, next) {
 
-  dbConnection.query(deleletq, (error, result, fields) => {
+  let {
+    firstname,
+    lastname,
+    email,
+    phonenumber,
+    passengers,
+    amount,
+    date
+    // create_datetime,
+  } = req.body // destructing of object property 
+
+
+  let insert_query = `INSERT INTO flight_booking
+            (firstname,lastname, email,phonenumber, passengers,amount,date)
+             VALUES ('${firstname}','${lastname}','${email}','${phonenumber}', '${passengers}', '${amount}','${date}')`;
+
+  dbConnection.query(insert_query, (error, result, fields) => {
+
     if (error) {
       res.send(error);
       throw error;
     } else {
       console.log(result);
-      if (result.affectedRows) {
-        res.send(`${firstname} has been delete`)
-      } else {
-        res.send(`Unable to delete user, Not Found`);
-      }
+      res.send('user profile added successfully');
     }
+
   });
 
 });
+
+// router.delete('/delete-user/:firstname', (req, res, next) => {
+//   let firstname = req.params.firstname;
+//   let deleletq = `DELETE FROM signup WHERE firstname = '${firstname}'`;
+
+//   dbConnection.query(deleletq, (error, result, fields) => {
+//     if (error) {
+//       res.send(error);
+//       throw error;
+//     } else {
+//       console.log(result);
+//       if (result.affectedRows) {
+//         res.send(`${firstname} has been delete`)
+//       } else {
+//         res.send(`Unable to delete user, Not Found`);
+//       }
+//     }
+//   });
+
+// });
 module.exports = router;

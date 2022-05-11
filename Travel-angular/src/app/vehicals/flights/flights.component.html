@@ -10,9 +10,9 @@
                             <div class="col-md-2">
 
                                 <label for="inputState" class="form-label">
-                                  <h4><b>From</b></h4>
+                                    <h4 style="margin-left:70px;"><b>From</b></h4>
                                 </label>
-                                
+
                                 <mat-form-field appearance="fill" style="top:17%;left: 22%">
                                     <mat-label>Select an option</mat-label>
                                     <mat-select disableRipple id="from" name="fromLocation" ngModel #fromL="ngModel">
@@ -32,7 +32,7 @@
 
                             <div class="col-md-2">
                                 <label for="inputState" class="form-label" style="left: 50%;">
-                                    <h4><b>To</b></h4>
+                                    <h4 style="margin-left:130px;"><b>To</b></h4>
                                 </label>
                                 <mat-form-field appearance="fill" style="top:17%;left: 48%">
 
@@ -50,13 +50,17 @@
                                         <mat-option value="Greece" id="10">Greece</mat-option>
                                         <mat-option value="Spain" id="11">Spain</mat-option>
                                         <mat-option value="Amsterdom" id="12">Amsterdom,Netherlands</mat-option>
-                                    
+
 
                                     </mat-select>
                                 </mat-form-field>
                             </div>
 
                             <ul>
+                                <label for="inputState" class="form-label">
+                                    <h4 style="margin-left:620px; margin-top:-8.5%;position: absolute;"><b>DEPARTURE</b>
+                                    </h4>
+                                </label>
                                 <li>
                                     <mat-form-field class="example-full-width" appearance="fill"
                                         style="left: 48%; top:30%;position: absolute;">
@@ -66,6 +70,11 @@
                                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                         <mat-datepicker touchUi #picker></mat-datepicker>
                                     </mat-form-field>
+
+                                    <label for="inputState" class="form-label">
+                                        <h4 style="margin-left:950px; margin-top:-10%;position: absolute;"><b>RETURN</b>
+                                        </h4>
+                                    </label>
 
                                     <mat-form-field class="example-full-width" appearance="fill"
                                         style="left: 69%; top:30%;position: absolute;">
@@ -80,10 +89,11 @@
                         </div>
 
 
-                        <button class="btn btn-primary  btn-lg  rounded-pill" type="button" aria-expanded="false" style="left: 40%;position: relative; margin-top: 2.5%;width: 11%;height: 50px;">
+                        <button class="btn btn-primary  btn-lg  rounded-pill" type="button" aria-expanded="false"
+                            style="left: 40%;position: relative; margin-top: 1%;width: 11%;height: 50px;">
                             <a [routerLink]="['/flights/search']" [queryParams]="{ from:fromL.value, to: toLoc.value}"
                                 style="text-decoration: none; color:white;">
-                               <b> Search </b></a>
+                                <b> Search </b></a>
                         </button>
                     </div>
                 </form>

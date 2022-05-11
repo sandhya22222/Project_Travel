@@ -31,6 +31,7 @@ import { TohotelsComponent } from './routing/tohotels/tohotels.component';
 import { HotelclickComponent } from './routing/hotelclick/hotelclick.component';
 import { TobusesComponent } from './routing/tobuses/tobuses.component';
 import { TocabesComponent } from './routing/tocabes/tocabes.component';
+import { BusclickComponent } from './routing/busclick/busclick.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { TocabesComponent } from './routing/tocabes/tocabes.component';
       TohotelsComponent,
       HotelclickComponent,
       TobusesComponent,
-      TocabesComponent
+      TocabesComponent,
+      BusclickComponent
   ],
   imports: [
     BrowserModule,

@@ -15,10 +15,6 @@ export class SignupService {
     return this.myHttp.get('http://localhost:4200/api/users')
   }
 
-//   getSignuplist(data:any){
-//     return this.myHttp.post('http://localhost:4200/api/users/signup',data)  
-// }
-
 
 loginUser(email: string, password: string) {
   //rest api call to express
@@ -29,5 +25,8 @@ loginUser(email: string, password: string) {
 
   return this.myHttp.post('api/users/login', loginData);
 }
+
+//flightclick
+
 
 }

@@ -1,0 +1,21 @@
+/* .body{
+    background-color: skyblue;
+} */
+
+.border{
+    width: 38%;
+    height: 730px;
+    margin-left: 100px;
+    position: relative;
+  justify-content: center;
+
+}
+
+.form{
+    justify-content: center;
+}
+
+.color{
+    background-color: yellow
+}
+

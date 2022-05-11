@@ -17,14 +17,12 @@
 
             <h4 class="cost"><b>{{busl.bcost}}</b></h4>
             <p class="pline">{{busl.pline}} </p>
-            <button class="btn btn-primary  btn-lg  rounded-pill" type="button" aria-expanded="false"
-                style="left: 80%;position: relative; margin-top: 1.5%;width: 10%;height: 45px;">
+            <a class="btn btn-primary  btn-lg  rounded-pill" type="button" aria-expanded="false" [routerLink]="['/busclick']">
                 <b> Select </b>
-            </button>
+            </a>
             <p class="fromtime"><b>{{busl.fromtime}}</b></p>
             <a class="line">{{busl.way}}</a>
             <p class="time"><b>{{busl.totime}}</b></p>
-            <!-- <br><br><br><br> -->
             <img src="https://jsak.mmtcdn.com/bus_cdn_dt/static/media/ic-gps.704f79e1.svg">
             <p class="track">{{busl.track}} </p>
 

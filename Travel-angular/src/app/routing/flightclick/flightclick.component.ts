@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { SignupService } from 'src/app/services/signup.service';
 
 @Component({
   selector: 'app-flightclick',
@@ -11,14 +13,45 @@ export class FlightclickComponent implements OnInit {
   passengers: number = 1;
 
   ticketPrize: number = 5000;
+  userList: any;
+  isUserAdded:boolean=false;
 
-  constructor() { }
+  constructor(private signService: SignupService,private myhttp: HttpClient) { }
 
   ngOnInit(): void {
+    // this.signService.getFlightlist().subscribe((result:any)=>{
+    //   this.userList=result
+    //   console.log(result)
+    //  })
   }
-  getValues() {
-     alert("Payment done successfully")
-  }
+
+  getFormsValue(formRef: any) {
+
+    let data = {
+    firstname: formRef.value.fname,
+    lastname: formRef.value.lname,
+    email: formRef.value.email,
+    phonenumber:formRef.value.phonenumber,
+    passengers: formRef.value.passengers,
+    amount:formRef.value.amount,
+    date:formRef.value.date,
+      // job_title: formRef.value['my-langs'],
+      
+      // create_datetime: new Date().toJSON().slice(0, 10)
+    };
+
+    this.myhttp.post('/api/users/flightclick', data, { responseType: 'text' })
+    .subscribe(data => {
+      console.log(data);
+      this.isUserAdded = true;
+      formRef.form.reset();
+    });
+}
+
+
+  // getValues() {
+  //    alert("Payment done successfully")
+  // }
   getAmount() {
 
     this.isGetAmtClicked = true;

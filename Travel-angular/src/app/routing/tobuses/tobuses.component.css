@@ -1,73 +1,83 @@
-.border{
-  
-    border-radius:15px;
+.border {
+
+    border-radius: 15px;
     background-color: #ffff;
     height: 40%;
     min-height: 250px;
     width: 70%;
-}  
-.time{
-    margin-left: 30%; 
-    margin-top: -5% ;
 }
-.line{
-    position:relative;
+
+.time {
+    margin-left: 30%;
+    margin-top: -5%;
+}
+
+.line {
+    position: relative;
     margin-top: -5%;
     width: 13%;
     margin-left: 15%;
 
 }
-.pline
-{
+
+.pline {
     margin-top: -6%;
 }
-.busename{
+
+.busename {
     margin-top: 2%;
 }
-.fromtime{
+
+.fromtime {
     margin-right: 43%;
-     margin-top: -5%;
+    margin-top: -5%;
 }
-img{
-    width:6%;
+
+img {
+    width: 6%;
     height: 7%;
 }
-.track{
+
+.track {
     margin-top: -3%;
     margin-left: 5%;
 }
-  /* img1{
+
+/* img1{
 width: 6%;
 top: -5%;
 margin-left: -5% ;
   } */
-.free{
-margin-top: -4%;
-margin-left: 20%;
+.free {
+    margin-top: -4%;
+    margin-left: 20%;
 }
-.cost{
+
+.cost {
 
     margin-left: 81%;
     width: 50%;
-    
+
 }
-.start{
-    margin-left:80%;
+
+.start {
+    margin-left: 80%;
 }
-.button{
+
+.button {
     width: 10%;
     margin-left: 50%;
 }
-.btn btn-primary{
+
+.btn btn-primary {
     margin-left: 70%;
 }
 
-
-/* .box:hover{
-    box-shadow: 5px 5px 5px rgb(208, 208, 213);
-    transform:scale(1);
-    cursor: pointer;
+.btn {
+    left: 80%;
+    position: relative;
+    margin-top: 1.5%;
+    width: 10%;
+    height: 45px;
+    text-align: center;
 }
-.success{
-    font-size: 10px;
-}  */

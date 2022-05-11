@@ -20,6 +20,7 @@ import { HotelclickComponent } from './routing/hotelclick/hotelclick.component';
 import { TobusesComponent } from './routing/tobuses/tobuses.component';
 import { SubmitComponent } from './routing/submit/submit.component';
 import { TocabesComponent } from './routing/tocabes/tocabes.component';
+import { BusclickComponent } from './routing/busclick/busclick.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -53,6 +54,8 @@ const routes: Routes = [
   { path: 'trainclick', component: TrainclickComponent },
 
   {path:'flightclick',component:FlightclickComponent},
+
+  {path:'busclick',component:BusclickComponent},
 
   { path: 'mytrips', component: MytripsComponent },
 
