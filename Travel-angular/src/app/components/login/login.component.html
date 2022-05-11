@@ -1,3 +1,4 @@
+<!-- <app-headertwo></app-headertwo> -->
 <br>
 <div class="container"
     style=" background-size:cover; height: 600px; padding: -2px;background-image: url(https://img.freepik.com/free-vector/paper-art-airplane-flying-from-mobile-phone-holiday-concept_34103-332.jpg?size=626&ext=jpg&ga=GA1.2.609849508.1649337730);">
@@ -10,11 +11,19 @@
         </div>
         <br>
         <br>
+        <!-- <div class="form-group mb-3">
+            <label for="fname"><b>Username</b></label>
+            <input type="text" formControlName="fname" class="form-control" id="exampleInputText1"
+                placeholder="Enter your name"
+                [ngClass]="{'is-invalid': submitted && f['firstname'].errors}" />
+        </div> -->
         <div class="form-group mb-3">
+
+            <br>
             <label for="email"><b>Email address</b></label>
-            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email"
-                aria-describedby="emailHelp" email="true"
-                [ngClass]="{'is-invalid': submitted && f['email'].errors}"/>
+            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+                placeholder="Enter your email" aria-describedby="emailHelp" email="true"
+                [ngClass]="{'is-invalid': submitted && f['email'].errors}" />
             <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
                 <div class="text-danger" *ngIf="f['email'].errors['required']">Valid email is required</div>
             </div>
@@ -22,31 +31,27 @@
         <br>
         <div class=" form-group mb-3">
             <label for="password"><b>Password</b></label>
-            <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Password" minlength="6"
-                [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" required>
+            <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1"
+                placeholder="Password" minlength="6" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                required>
             <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
 
                 <div class="text-danger" *ngIf="f['password'].errors['required']">Password is required</div>
             </div>
         </div>
         <br>
-        <!-- <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1"><b>Check me out</b></label>
-            &nbsp;&nbsp; <a href="#">forget password</a> -->
-
         <div class="form-group">
             <button [disabled]="loading" class="btn btn-primary">
                 <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                 Login
             </button>
             <a routerLink="/signup" class="btn btn-link">Register</a>
-            &nbsp;&nbsp; <a href="#">forget password</a> 
+            &nbsp;&nbsp; <a href="#">forget password</a>
 
         </div>
         <div *ngIf="userMessage" class="form-control is-invalid"> {{userMessage}}</div>
         <br> <br> <br>
-       <!-- <button type="submit" class="btn btn-primary">Login</button> -->
+        <!-- <button type="submit" class="btn btn-primary">Login</button> -->
     </form>
-  
+
 </div>

@@ -8,15 +8,18 @@ import { SignupService } from 'src/app/services/signup.service';
   styleUrls: ['./flightclick.component.css']
 })
 export class FlightclickComponent implements OnInit {
+
+
+  bookedby = 10;
   calculateAmount = 0;
   isGetAmtClicked = false;
   passengers: number = 1;
 
   ticketPrize: number = 5000;
   userList: any;
-  isUserAdded:boolean=false;
+  isUserAdded: boolean = false;
 
-  constructor(private signService: SignupService,private myhttp: HttpClient) { }
+  constructor(private signService: SignupService, private myhttp: HttpClient) { }
 
   ngOnInit(): void {
     // this.signService.getFlightlist().subscribe((result:any)=>{
@@ -28,25 +31,23 @@ export class FlightclickComponent implements OnInit {
   getFormsValue(formRef: any) {
 
     let data = {
-    firstname: formRef.value.fname,
-    lastname: formRef.value.lname,
-    email: formRef.value.email,
-    phonenumber:formRef.value.phonenumber,
-    passengers: formRef.value.passengers,
-    amount:formRef.value.amount,
-    date:formRef.value.date,
-      // job_title: formRef.value['my-langs'],
-      
-      // create_datetime: new Date().toJSON().slice(0, 10)
+      booked_by: formRef.value.bookedby,
+      firstname: formRef.value.fname,
+      lastname: formRef.value.lname,
+      email: formRef.value.email,
+      phonenumber: formRef.value.phonenumber,
+      passengers: formRef.value.passengers,
+      amount: formRef.value.amount,
+      date: formRef.value.date,
     };
 
     this.myhttp.post('/api/users/flightclick', data, { responseType: 'text' })
-    .subscribe(data => {
-      console.log(data);
-      this.isUserAdded = true;
-      formRef.form.reset();
-    });
-}
+      .subscribe(data => {
+        console.log(data);
+        this.isUserAdded = true;
+        formRef.form.reset();
+      });
+  }
 
 
   // getValues() {

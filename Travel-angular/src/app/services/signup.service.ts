@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FormArrayName } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,7 @@ export class SignupService {
 loginUser(email: string, password: string) {
   //rest api call to express
   let loginData = {
+    // fname:fname,
     email: email,
     password: password
   };

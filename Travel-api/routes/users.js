@@ -47,6 +47,7 @@ router.post('/signup', function (req, res, next) {
 
 router.post('/login', (req, res, next) => {
   let {
+
     email,
     password
   } = req.body; // destructing of object property 
@@ -76,6 +77,7 @@ router.post('/login', (req, res, next) => {
 router.post('/flightclick', function (req, res, next) {
 
   let {
+    booked_by,
     firstname,
     lastname,
     email,
@@ -88,8 +90,8 @@ router.post('/flightclick', function (req, res, next) {
 
 
   let insert_query = `INSERT INTO flight_booking
-            (firstname,lastname, email,phonenumber, passengers,amount,date)
-             VALUES ('${firstname}','${lastname}','${email}','${phonenumber}', '${passengers}', '${amount}','${date}')`;
+            (booked_by,firstname,lastname, email,phonenumber, passengers,amount,date)
+             VALUES ('${booked_by}','${firstname}','${lastname}','${email}','${phonenumber}', '${passengers}', '${amount}','${date}')`;
 
   dbConnection.query(insert_query, (error, result, fields) => {
 
@@ -104,6 +106,11 @@ router.post('/flightclick', function (req, res, next) {
   });
 
 });
+
+//get user details
+
+
+
 
 // router.delete('/delete-user/:firstname', (req, res, next) => {
 //   let firstname = req.params.firstname;
