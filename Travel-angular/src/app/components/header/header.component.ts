@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  loggedIn: any;
+  constructor() { 
+    this.loggedIn = JSON.parse(sessionStorage.getItem('loggedUser') || 'null');
+  }
 
   ngOnInit(): void {
   }
-
+  
+  logout() {
+    sessionStorage.clear();
+    window.location.reload();
+  }
 }

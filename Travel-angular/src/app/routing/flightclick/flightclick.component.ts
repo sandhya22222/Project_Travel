@@ -10,7 +10,8 @@ import { SignupService } from 'src/app/services/signup.service';
 export class FlightclickComponent implements OnInit {
 
 
-  bookedby = 10;
+  bookedby :string='loggedIn?.firstname';
+  loggedIn:any;
   calculateAmount = 0;
   isGetAmtClicked = false;
   passengers: number = 1;
@@ -19,7 +20,9 @@ export class FlightclickComponent implements OnInit {
   userList: any;
   isUserAdded: boolean = false;
 
-  constructor(private signService: SignupService, private myhttp: HttpClient) { }
+  constructor(private signService: SignupService, private myhttp: HttpClient) {
+    this.loggedIn = JSON.parse(sessionStorage.getItem('loggedUser') || 'null');
+   }
 
   ngOnInit(): void {
     // this.signService.getFlightlist().subscribe((result:any)=>{
@@ -37,7 +40,7 @@ export class FlightclickComponent implements OnInit {
       email: formRef.value.email,
       phonenumber: formRef.value.phonenumber,
       passengers: formRef.value.passengers,
-      amount: formRef.value.amount,
+      amount: this.calculateAmount,
       date: formRef.value.date,
     };
 

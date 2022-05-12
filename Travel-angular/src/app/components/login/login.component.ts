@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private myuser: SignupService
-   
+
   ) { }
 
 
@@ -55,9 +55,10 @@ export class LoginComponent implements OnInit {
         {
           next: (data: any) => {
             this.loading = true;
-
+            console.log(data, this.f)
 
             if (data.length) {
+              sessionStorage.setItem('loggedUser', JSON.stringify(data[0]));
               this.router.navigate(['/']);
             } else {
               this.userMessage = 'Login user not found, please enter correct email and password';

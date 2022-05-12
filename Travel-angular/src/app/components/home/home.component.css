@@ -1,50 +1,49 @@
-.border{
+.border {
     padding: 60px;
-    border-radius:15px;
+    border-radius: 15px;
     background-color: #ffff;
     height: 50%;
     min-height: 250px;
     margin-top: 5%;
-} 
+}
 
-.offers{
+.offers {
     padding: 10px;
-    border-radius:15px;
-    background-color:rgba(226, 92, 43, 0.85);
+    border-radius: 15px;
+    background-color: rgba(226, 92, 43, 0.85);
     margin-top: 2%;
-   min-width: 150px;
-   right: 45%;
+    min-width: 150px;
+    right: 45%;
     position: absolute;
     min-height: 55px;
     text-align: center;
 }
 
-.Places{
+.Places {
     padding: 10px;
-    border-radius:15px;
-    background-color:rgba(226, 92, 43, 0.85);
+    border-radius: 15px;
+    background-color: rgba(226, 92, 43, 0.85);
     margin-top: 2%;
-   min-width: 150px;
-   right: 45%;
+    min-width: 150px;
+    right: 45%;
     position: absolute;
     min-height: 55px;
     text-align: center;
-} 
-
-
-
-.card:hover{
+}
+.card:hover {
     box-shadow: 5px 5px 5px rgb(211, 211, 213);
-    transform:scale(1);
+    transform: scale(1);
     cursor: pointer;
 }
 
-.btn-group{
+.btn-group {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 30px;
 }
-.img{
-    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210115/pngtree-cartoon-doodle-travel-icon-background-image_525368.jpg");
-}
 
+.img {
+    background-image: url("https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+    width: 100%;
+    background-size: cover;
+}

@@ -8,8 +8,11 @@
                 <div class="col">
                     <label><b>Booked By</b></label>
             
-                        <input type="number" name="bookedby" [(ngModel)]="bookedby" readonly required>                   
-                    
+                        <input type="text" name="bookedby" [(ngModel)]="bookedby" readonly required>                   
+                        <b *ngIf="loggedIn?.firstname">
+                         {{loggedIn?.firstname | uppercase}} 
+                            
+                        </b>
                 </div>
                 <br>
                 <div class="row g-3">

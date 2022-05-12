@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET users listing. */
 let dbConnection = require('./../db/db').localConnect();
 router.get('/', function (req, res, next) {
- 
+
   dbConnection.query('select * from signup', (error, results, fields) => {
     if (error) throw error;
     res.send(results)
@@ -91,7 +91,8 @@ router.post('/flightclick', function (req, res, next) {
 
   let insert_query = `INSERT INTO flight_booking
             (booked_by,firstname,lastname, email,phonenumber, passengers,amount,date)
-             VALUES ('${booked_by}','${firstname}','${lastname}','${email}','${phonenumber}', '${passengers}', '${amount}','${date}')`;
+             VALUES ('${booked_by}','${firstname}','${lastname}','${email}','${phonenumber}',
+              '${passengers}', ${amount},'${date}')`;
 
   dbConnection.query(insert_query, (error, result, fields) => {
 

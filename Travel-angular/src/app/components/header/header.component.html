@@ -21,10 +21,13 @@
                     </li> -->
                 </ul>
                 <ul class="navbar-nav  mb-6  ">
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="!loggedIn">
                     <a class="nav-link active" href="/Login"><b>Login</b></a>
                 </li>
-                
+                <b *ngIf="loggedIn?.firstname">
+                    Welcome, {{loggedIn?.firstname | uppercase}} 
+                    <button (click)="logout()">Logout</button>
+                </b>
                 <li class="nav-item">
                     <a class="nav-link active" href="/signup"><b>SignUp</b></a>
                 </li>
