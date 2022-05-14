@@ -8,9 +8,6 @@ import { SignupService } from 'src/app/services/signup.service';
   styleUrls: ['./flightclick.component.css']
 })
 export class FlightclickComponent implements OnInit {
-
-
-  bookedby :string='loggedIn?.firstname';
   loggedIn:any;
   calculateAmount = 0;
   isGetAmtClicked = false;
@@ -34,11 +31,13 @@ export class FlightclickComponent implements OnInit {
   getFormsValue(formRef: any) {
 
     let data = {
-      booked_by: formRef.value.bookedby,
+     
       firstname: formRef.value.fname,
       lastname: formRef.value.lname,
       email: formRef.value.email,
       phonenumber: formRef.value.phonenumber,
+      fromc: formRef.value.from,
+      toc: formRef.value.to,
       passengers: formRef.value.passengers,
       amount: this.calculateAmount,
       date: formRef.value.date,

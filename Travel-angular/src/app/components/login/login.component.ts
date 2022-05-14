@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SignupService } from 'src/app/services/signup.service';
@@ -9,6 +9,9 @@ import { SignupService } from 'src/app/services/signup.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+   @ViewChild('email') nameKey!:ElementRef;
+
   loginForm!: FormGroup;
   loading = false;
   submitted = false;
@@ -46,7 +49,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-
+    sessionStorage.setItem("email",this.nameKey.nativeElement.value);
     this.loading = true;
 
 
