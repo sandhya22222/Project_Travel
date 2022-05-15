@@ -198,22 +198,36 @@ router.post('/hotelclick', function (req, res, next) {
       throw error;
     } else {
       +
-      console.log(result);
+        console.log(result);
       res.send('user profile added successfully');
     }
   });
 
 });
 
-
-
 //flightlist getting
-router.get('/mytrips', function (req, res, next) {
-  let email = req.body.email;
-  let selectQuery = `select * from flight_booking WHERE email ="raju@gmail.com"`;
+router.get('/flightclick', function (req, res, next) {
+  let email = req.query.email;
+  console.log(email)
+  let selectQuery = `select * from flight_booking WHERE email ='${email}'`;
   dbConnection.query(selectQuery, (error, results, fields) => {
     if (error) throw error;
     res.send(results)
+
+  })
+});
+
+//trainlist
+
+router.get('/trainclick', function (req, res, next) {
+  // let email = req.body.email;
+  let email = req.query.email;
+  console.log(email)
+  let selectQuery = `select * from train_booking WHERE email ='${email}'`;
+  dbConnection.query(selectQuery, (error, results, fields) => {
+    if (error) throw error;
+    res.send(results)
+
   })
 });
 

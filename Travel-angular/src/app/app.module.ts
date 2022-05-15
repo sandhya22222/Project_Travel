@@ -33,6 +33,7 @@ import { TobusesComponent } from './routing/tobuses/tobuses.component';
 import { TocabesComponent } from './routing/tocabes/tocabes.component';
 import { BusclickComponent } from './routing/busclick/busclick.component';
 import { HeadertwoComponent } from './components/headertwo/headertwo.component';
+import { TraindetailsComponent } from './routing/traindetails/traindetails.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { HeadertwoComponent } from './components/headertwo/headertwo.component';
       TobusesComponent,
       TocabesComponent,
       BusclickComponent,
-      HeadertwoComponent
+      HeadertwoComponent,
+      TraindetailsComponent
   ],
   imports: [
     BrowserModule,

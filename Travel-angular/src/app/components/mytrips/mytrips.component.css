@@ -1,0 +1,14 @@
+.color{
+    background-color: aquamarine;
+    min-height: 300px;
+}
+
+.border{
+    min-height: 400px;
+    background-color: #ffff;
+    width: 70%;
+    margin-top: -180px;
+    border-radius: 20px;
+    border-color: grey;
+}
+

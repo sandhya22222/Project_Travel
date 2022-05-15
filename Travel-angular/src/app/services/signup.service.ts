@@ -14,7 +14,7 @@ export class SignupService {
 
   getProfiles(){
     return this.myHttp.get('http://localhost:4200/api/users')
-  }
+  } 
 
 
 loginUser(email: string, password: string) {

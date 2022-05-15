@@ -15,7 +15,10 @@ export class TrainclickComponent implements OnInit {
   passengers: number = 1;
 
   ticketPrize: number = 500;
-  constructor(private route: ActivatedRoute, private myhttp: HttpClient) { }
+  loggedIn: any;
+  constructor(private route: ActivatedRoute, private myhttp: HttpClient) { 
+    this.loggedIn = JSON.parse(sessionStorage.getItem('loggedUser') || 'null');
+  }
 
   ngOnInit(): void {
     // this.route.queryParams.subscribe((data) => this.trainL = data)
