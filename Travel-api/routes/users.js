@@ -220,7 +220,6 @@ router.get('/flightclick', function (req, res, next) {
 //trainlist
 
 router.get('/trainclick', function (req, res, next) {
-  // let email = req.body.email;
   let email = req.query.email;
   console.log(email)
   let selectQuery = `select * from train_booking WHERE email ='${email}'`;
@@ -231,23 +230,48 @@ router.get('/trainclick', function (req, res, next) {
   })
 });
 
-//get user details// router.delete('/delete-user/:firstname', (req, res, next) => {
-//   let firstname = req.params.firstname;
-//   let deleletq = `DELETE FROM signup WHERE firstname = '${firstname}'`;
+router.get('/hotelclick', function (req, res, next) {
+  let email = req.query.email;
+  console.log(email)
+  let selectQuery = `select * from hotel_booking WHERE email ='${email}'`;
+  dbConnection.query(selectQuery, (error, results, fields) => {
+    if (error) throw error;
+    res.send(results)
 
-//   dbConnection.query(deleletq, (error, result, fields) => {
-//     if (error) {
-//       res.send(error);
-//       throw error;
-//     } else {
-//       console.log(result);
-//       if (result.affectedRows) {
-//         res.send(`${firstname} has been delete`)
-//       } else {
-//         res.send(`Unable to delete user, Not Found`);
-//       }
-//     }
-//   });
+  })
+});
 
-// });
+//buslist
+ 
+router.get('/busclick', function (req, res, next) {
+  let email = req.query.email;
+  console.log(email)
+  let selectQuery = `select * from bus_booking WHERE email ='${email}'`;
+  dbConnection.query(selectQuery, (error, results, fields) => {
+    if (error) throw error;
+    res.send(results)
+
+  })
+});
+
+//get user details
+router.delete('/signup/:firstname', (req, res, next) => {
+  let firstname = req.params.firstname;
+  let deleteq = `DELETE FROM signup WHERE firstname = '${firstname}'`;
+
+  dbConnection.query(deleteq, (error, result, fields) => {
+    if (error) {
+      res.send(error);
+      throw error;
+    } else {
+      console.log(result);
+      if (result.affectedRows) {
+        res.send(`${firstname} has been deleted`)
+      } else {
+        res.send(`Unable to delete user, Not Found`);
+      }
+    }
+  });
+
+});
 module.exports = router;

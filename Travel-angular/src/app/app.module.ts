@@ -32,8 +32,11 @@ import { HotelclickComponent } from './routing/hotelclick/hotelclick.component';
 import { TobusesComponent } from './routing/tobuses/tobuses.component';
 import { TocabesComponent } from './routing/tocabes/tocabes.component';
 import { BusclickComponent } from './routing/busclick/busclick.component';
-import { HeadertwoComponent } from './components/headertwo/headertwo.component';
+
 import { TraindetailsComponent } from './routing/traindetails/traindetails.component';
+import { FlightdetailsComponent } from './routing/flightdetails/flightdetails.component';
+import { BusdetailsComponent } from './routing/busdetails/busdetails.component';
+import { HoteldetailsComponent } from './routing/hoteldetails/hoteldetails.component';
 
 
 @NgModule({
@@ -54,17 +57,19 @@ import { TraindetailsComponent } from './routing/traindetails/traindetails.compo
     BnLdFlightsComponent,
 
     MytripsComponent,
-      TotrainsComponent,
-      TrainclickComponent,
-      FlightclickComponent,
-      SubmitComponent,
-      TohotelsComponent,
-      HotelclickComponent,
-      TobusesComponent,
-      TocabesComponent,
-      BusclickComponent,
-      HeadertwoComponent,
-      TraindetailsComponent
+    TotrainsComponent,
+    TrainclickComponent,
+    FlightclickComponent,
+    SubmitComponent,
+    TohotelsComponent,
+    HotelclickComponent,
+    TobusesComponent,
+    TocabesComponent,
+    BusclickComponent,
+    TraindetailsComponent,
+    FlightdetailsComponent,
+    BusdetailsComponent,
+    HoteldetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +79,7 @@ import { TraindetailsComponent } from './routing/traindetails/traindetails.compo
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
- 
+
   ],
   providers: [],
   bootstrap: [AppComponent]

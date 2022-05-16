@@ -4,7 +4,7 @@
 }
 
 .border{
-    min-height: 400px;
+    min-height: 420px;
     background-color: #ffff;
     width: 70%;
     margin-top: -180px;
@@ -12,3 +12,19 @@
     border-color: grey;
 }
 
+.image{
+    margin-left: 150px;
+    margin-top: -90px;
+  }
+.msg{
+    margin-left: 380px;
+    margin-top: 80px;
+ } 
+.text{
+    margin-left: 380px;
+    margin-top: 30px;
+ }
+.button{
+    margin-left: 250px;
+    margin-top: 40px;
+}

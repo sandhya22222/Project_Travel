@@ -17,31 +17,31 @@ export class TocabesComponent implements OnInit {
   },
   {
     img: 'https://jsak.mmtcdn.com/cabs_cdn_dt/image/Cab_Images/sedan_new.png',
-    hotelname:'Dzire, Etios',
+    cabname:'Dzire, Etios',
     checkin:'Free Cancellation till 24hrs before checkin',
     rating:'400+guests like you rated stay Very Good'
   },
   {
     img: 'https://jsak.mmtcdn.com/cabs_cdn_dt/image/Cab_Images/sedan_new.png',
-     hotelname:'HOTEL SUBA INTERNATIONAL',
+    cabname:'Toyota Etios',
      checkin:'Free Cancellation till 24hrs before checkin',
      rating:'500+guests like you rated stay Very Good'
   },
   {
     img: 'https://jsak.mmtcdn.com/cabs_cdn_dt/image/Cab_Images/sedan_new.png',
-    hotelname:'THE OBEROI HOTEL',
+    cabname:'Xylo, Ertiga',
     checkin:'Free Cancellation till 24hrs before checkin',
     rating:'300+guests like you rated stay Very Good'
   },
   {
     img: 'https://jsak.mmtcdn.com/cabs_cdn_dt/image/Cab_Images/sedan_new.png',
-    hotelname:'THE TAJ MAHAL PALACE',
+    cabname:'Innova Crysta',
     checkin:'Free Cancellation till checkin',
     rating:'500+guests like you rated stay Very Good'
   },
   {
     img: 'https://jsak.mmtcdn.com/cabs_cdn_dt/image/Cab_Images/sedan_new.png',
-    hotelname:'HOTEL GODWIN',
+    cabname:'Indica, Swift',
     checkin:'Free Cancellation till 24hrs before checkin',
     rating:'400+guests like you rated stay Very Good'
   },

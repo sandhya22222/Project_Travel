@@ -11,35 +11,29 @@
         <mat-tab label="UPCOMING">
             <!-- TemplateRef<NgIfContext<T>> -->
             <br>
-            <div *ngIf="userList">
-
-                <div *ngFor="let myele of userList">
-
-                    <!-- {{myele.firstname}}
-                    {{myele.lastname}} -->
-
-                </div>
-
-                <div *ngFor="let myele of user">
+            <div>
+                <!-- flightlist -->
+                <div *ngFor="let myel of userList">
                     <div class="card">
-                        <div class="card" role="document" style="background-color: greenyellow;">
+                        <div class="card" role="document" style="background-color: rgb(255, 193, 47);">
                             <div class="modal-content">
-                                <div class="modal-header" style="background-color:greenyellow;">
-                                    <h3 class="modal-title" style="font-style:oblique ;">Train Tickets</h3>
+                                <div class="modal-header" style="background-color:rgb(255, 193, 47);">
+                                    <h3 class="modal-title" style="font-style:oblique ;">Flight Tickets</h3>
                                 </div>
-                                <div class="modal-body" style="background-color:greenyellow;">
+                                <div class="modal-body">
                                     <h3 style="padding-left:160px;font-style: oblique;">From</h3>
                                     <br>
-                                    <h4 style="padding-left:150px ; font-style: oblique;">{{myele.fromc}}</h4>
+                                    <h4 style="padding-left:150px ; font-style: oblique;">{{myel.fromc}}</h4>
                                     <div class="container" style="padding-left:450px ; margin-top:-100px">
-                                    <img src="https://www.ixigo.com/rt-flight/pc/img/train-new.svg" width="100px">
-                                    <h3 style="padding-left:350px;font-style: oblique; margin-top:-100px">To</h3>
-                                    <br>
-                                    <h4 style="padding-left:310px ; font-style: oblique;">{{myele.Toc}}</h4>
+                                        <img src="https://www.ixigo.com/rt-flight/pc/img/flight-new.svg" width="100px">
+                                        <h3 style="padding-left:350px;font-style: oblique; margin-top:-100px">To</h3>
+                                        <br>
+                                        <h4 style="padding-left:310px ; font-style: oblique;">{{myel.Toc}}</h4>
+                                    </div>
                                 </div>
-                                </div>
-                                <div class="modal-footer" style="background-color:greenyellow;">
-                                    <button type="button" class="btn btn-primary"  mat-button (click)="openDialog()">Details</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary"
+                                        (click)="openDialogFlight()">Details</button>
                                     <button type="button" class="btn btn-danger">Cancellation</button>
                                 </div>
                             </div>
@@ -47,15 +41,123 @@
                     </div>
 
                 </div>
-            </div>
+                <br>
+                <!-- trainlist -->
+                <div *ngFor="let myele of user">
+                    <div class="card">
+                        <div class="card" role="document" style="background-color: rgba(172, 255, 47, 0.779);">
+                            <div class="modal-content">
+                                <div class="modal-header"  style="background-color: rgba(172, 255, 47, 0.779);">
+                                    <h3 class="modal-title" style="font-style:oblique ;">Train Tickets</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 style="padding-left:160px;font-style: oblique;">From</h3>
+                                    <br>
+                                    <h4 style="padding-left:150px ; font-style: oblique;">{{myele.fromc}}</h4>
+                                    <div class="container" style="padding-left:450px ; margin-top:-100px">
+                                        <img src="https://www.ixigo.com/rt-flight/pc/img/train-new.svg" width="100px">
+                                        <h3 style="padding-left:350px;font-style: oblique; margin-top:-100px">To</h3>
+                                        <br>
+                                        <h4 style="padding-left:310px ; font-style: oblique;">{{myele.Toc}}</h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary"
+                                        (click)="openDialog()">Details</button>
+                                    <button type="button" class="btn btn-danger">Cancellation</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- <div *ngIf="!userList">
-           other content here...
-          </div> -->
+                </div>
+<br>
+                <!-- buslist -->
+
+                <div *ngFor="let myele of busUser">
+                    <div class="card">
+                        <div class="card" role="document" style="background-color: skyblue;">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color:skyblue;">
+                                    <h3 class="modal-title" style="font-style:oblique ;">Bus Tickets</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 style="padding-left:160px;font-style: oblique;">From</h3>
+                                    <br>
+                                    <h4 style="padding-left:150px ; font-style: oblique;">{{myele.fromc}}</h4>
+                                    <div class="container" style="padding-left:450px ; margin-top:-100px">
+                                        <img src="https://www.ixigo.com/rt-flight/pc/img/bus-new.svg" width="100px">
+                                        <h3 style="padding-left:350px;font-style: oblique; margin-top:-100px">To</h3>
+                                        <br>
+                                        <h4 style="padding-left:310px ; font-style: oblique;">{{myele.Toc}}</h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary"
+                                        (click)="openDialogBus()">Details</button>
+                                    <button type="button" class="btn btn-danger">Cancellation</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- hotellist -->
+<br>
+                <div *ngFor="let myele of hotelUser">
+                    <div class="card">
+                        <div class="card" role="document" style="background-color: rgb(176, 73, 205);">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color:rgb(176, 73, 205);">
+                                    <h3 class="modal-title" style="font-style:oblique ;">Hotel Bookings</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 style="padding-left:160px;font-style: oblique;">Hotel Name</h3>
+                                    <br>
+                                    <h4 style="padding-left:150px ; font-style: oblique;">{{myele.hotelname}}</h4>
+                                    <div class="container" style="padding-left:450px ; margin-top:-100px">
+                                        <img src="https://www.ixigo.com/rt-flight/pc/img/hotel-new.svg" width="100px">
+                                        <h3 style="padding-left:350px;font-style: oblique; margin-top:-100px">City</h3>
+                                        <br>
+                                        <h4 style="padding-left:310px ; font-style: oblique;">{{myele.city}}</h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer" >
+                                    <button type="button" class="btn btn-primary"
+                                        (click)="openDialogHotel()">Details</button>
+                                    <button type="button" class="btn btn-danger">Cancellation</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <!-- <div *ngIf="!userList.user">
+                <h4 class="msg">Looks empty, you've no upcoming bookings.</h4>
+                <h6 class="text-muted text ">When you book a trip, you will see your itinerary here.</h6>
+                <img class="image" src="https://imgak.mmtcdn.com/mima/images/Desktop/upcoming-empty.png">
+                <a class="btn btn-primary button rounded-pill" [routerLink]="['/Login']">PLAN A TRIP</a>
+            </div> -->
 
         </mat-tab>
-        <mat-tab label="CANCELLED"> Content 2 </mat-tab>
-        <mat-tab label="COMPLETED"> Content 3 </mat-tab>
+        <mat-tab label="CANCELLED">
+            <div *ngIf="!userList.user">
+                <h4 class="msg">Looks empty, you've no upcoming bookings.</h4>
+                <h6 class="text-muted text ">When you book a trip, you will see your itinerary here.</h6>
+                <img class="image" src="https://imgak.mmtcdn.com/mima/images/Desktop/upcoming-empty.png">
+                <a class="btn btn-primary button rounded-pill" [routerLink]="['/']">PLAN A TRIP</a>
+            </div>
+        </mat-tab>
+        <mat-tab label="COMPLETED">
+            <div *ngIf="!userList.user">
+                <h4 class="msg">Looks empty, you've no upcoming bookings.</h4>
+                <h6 class="text-muted text ">When you book a trip, you will see your itinerary here.</h6>
+                <img class="image" src="https://imgak.mmtcdn.com/mima/images/Desktop/upcoming-empty.png">
+                <a class="btn btn-primary button rounded-pill" [routerLink]="['/']">PLAN A TRIP</a>
+            </div>
+        </mat-tab>
     </mat-tab-group>
 
 </div>
