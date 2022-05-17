@@ -34,7 +34,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary"
                                         (click)="openDialogFlight()">Details</button>
-                                    <button type="button" class="btn btn-danger">Cancellation</button>
+                                    <button type="button" class="btn btn-danger" (click)="getCancel()">Cancellation</button>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                 </div>
                 <br>
                 <!-- trainlist -->
-                <div *ngFor="let myele of user">
+                <div *ngFor="let myele of trainUser">
                     <div class="card">
                         <div class="card" role="document" style="background-color: rgba(172, 255, 47, 0.779);">
                             <div class="modal-content">

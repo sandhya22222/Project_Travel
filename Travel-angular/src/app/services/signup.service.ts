@@ -6,29 +6,24 @@ import { FormArrayName } from '@angular/forms';
   providedIn: 'root'
 })
 export class SignupService {
-  // loginUser(value: any, value: any) {
-  //   throw new Error('Method not implemented.');
-  // }
 
-  constructor(private myHttp:HttpClient) { }
 
-  getProfiles(){
+  constructor(private myHttp: HttpClient) { }
+
+  getProfiles() {
     return this.myHttp.get('http://localhost:4200/api/users')
-  } 
+  }
 
 
-loginUser(email: string, password: string) {
-  //rest api call to express
-  let loginData = {
-    // fname:fname,
-    email: email,
-    password: password
-  };
+  loginUser(email: string, password: string) {
+    //rest api call to express
+    let loginData = {
 
-  return this.myHttp.post('api/users/login', loginData);
-}
+      email: email,
+      password: password
+    };
 
-//flightclick
-
+    return this.myHttp.post('api/users/login', loginData);
+  }
 
 }

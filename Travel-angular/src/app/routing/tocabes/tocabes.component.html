@@ -12,17 +12,12 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><b>{{myele.cabname}}</b> </h5>
-
-                    <span>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </span>
-                    <br><br>
+                    <p>{{myele.facilities}}</p>
+                    <h6>{{myele.text}}</h6>
+                
                     <p class="card-text text-success">{{myele.checkin}}</p>
                     <p class="card-text"><small class="text-muted">{{myele.rating}}</small></p>
-                    <a class="btn btn-primary rounded-pill button" type="button" href="/hotelclick">Select</a>
+                    <a class="btn btn-primary rounded-pill button" type="button" [routerLink]="['/cabclick']">Select</a>
                 </div>
             </div>
         </div>

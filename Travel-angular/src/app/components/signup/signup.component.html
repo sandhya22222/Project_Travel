@@ -30,7 +30,7 @@
             <br>
             <div class="mb-3">
                 <label><b>Phone Number</b></label>
-                <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1" ngModel name="phnnum"
+                <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1" plcaholder="xxxxxxxxxx" ngModel name="phnnum"
                     #myphnnum="ngModel" required>
                 <div class="text-danger" *ngIf="myphnnum.touched && myphnnum.invalid">
                     <b>*please enter a number</b>
@@ -52,7 +52,7 @@
             <br>
             <div class="mb-3">
                 <label><b>Email address</b></label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="abc@gmail.com" aria-describedby="emailHelp" ngModel
                     email="true" name="email" #myemail="ngModel" required>
                 <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
                     <b>*please enter a valid email</b>

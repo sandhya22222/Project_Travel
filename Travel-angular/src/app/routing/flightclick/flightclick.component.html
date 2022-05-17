@@ -31,7 +31,8 @@
                             <div class="col">
                                 <label><b>Phone Number</b></label>
                                 <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1"
-                                    aria-label="Phone Number" ngModel name="phonenumber" #myphnnum="ngModel" required>
+                                    placeholder="xxxxxxxxxx" aria-label="Phone Number" ngModel name="phonenumber"
+                                    #myphnnum="ngModel" required>
                                 <div class="text-danger" *ngIf="myphnnum.touched && myphnnum.invalid">
                                     <b>*please enter a number</b>
                                 </div>
@@ -41,8 +42,8 @@
                             <div class="col">
                                 <label><b>Email address</b></label>
                                 <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" ngModel email="true" name="email" #myemail="ngModel"
-                                    required>
+                                    placeholder="abc@gmail.com" aria-describedby="emailHelp" ngModel email="true"
+                                    name="email" #myemail="ngModel" required>
                                 <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
                                     <b>*please enter a valid email</b>
                                 </div>
@@ -109,7 +110,7 @@
                         <div class="row g-3">
                             <div class="col">
                                 <label><b>Card Nmuber</b></label>
-                                <input type="cardnumber" class="form-control" placeholder="Card Nmuber"
+                                <input type="cardnumber" class="form-control" placeholder="xxxxxxxxxxxxxxxx"
                                     aria-label="Card Nmuber" ngModel name="cardn" #cardn="ngModel" required>
                                 <div class="text-danger" *ngIf="cardn.touched && cardn.invalid">
                                     <b>*please enter a value</b>

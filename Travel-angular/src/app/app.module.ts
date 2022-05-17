@@ -37,6 +37,7 @@ import { TraindetailsComponent } from './routing/traindetails/traindetails.compo
 import { FlightdetailsComponent } from './routing/flightdetails/flightdetails.component';
 import { BusdetailsComponent } from './routing/busdetails/busdetails.component';
 import { HoteldetailsComponent } from './routing/hoteldetails/hoteldetails.component';
+import { CabclickComponent } from './routing/cabclick/cabclick.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { HoteldetailsComponent } from './routing/hoteldetails/hoteldetails.compo
     TraindetailsComponent,
     FlightdetailsComponent,
     BusdetailsComponent,
-    HoteldetailsComponent
+    HoteldetailsComponent,
+    CabclickComponent
   ],
   imports: [
     BrowserModule,

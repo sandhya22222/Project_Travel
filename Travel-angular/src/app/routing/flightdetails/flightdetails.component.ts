@@ -19,4 +19,8 @@ export class FlightdetailsComponent implements OnInit {
     })
   }
 
+  getPrint(){
+    alert('Printed....')
+  }
+
 }

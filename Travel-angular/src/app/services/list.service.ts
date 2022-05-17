@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-// const baseUrl = 'http://localhost:8080/api/Cancellation';
+const baseUrl = 'http://localhost:4200/api/users/mytrips/:email';
 
 
 @Injectable({
@@ -49,4 +49,11 @@ export class ListService {
     };
     return this.myHttp.get('http://localhost:4200/api/users/hotelclick', queryOptions)
   }
+
+
+ deleteOne(email:string){
+   return this.myHttp.delete(`${baseUrl}/${email}`)
+  
+ }
+
 }

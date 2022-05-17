@@ -26,7 +26,7 @@
                         </li>
                         <li class="nav-item">
                             <b *ngIf="loggedIn?.firstname">
-                                <a> {{loggedIn?.firstname | uppercase}}</a>
+                                <a>Hi! {{loggedIn?.firstname | uppercase}}</a>
                                 <a class="nav-link active" (click)="logout()">Logout</a>
                             </b>
                         </li>

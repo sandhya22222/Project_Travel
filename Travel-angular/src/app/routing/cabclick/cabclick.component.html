@@ -30,8 +30,9 @@
                         <div class="row g-3">
                             <div class="col">
                                 <label><b>Phone Number</b></label>
-                                <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1" placeholder="xxxxxxxxxxx"
-                                    aria-label="Phone Number" ngModel name="phonenumber" #myphnnum="ngModel" required>
+                                <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1"
+                                    placeholder="xxxxxxxxxxx" aria-label="Phone Number" ngModel name="phonenumber"
+                                    #myphnnum="ngModel" required>
                                 <div class="text-danger" *ngIf="myphnnum.touched && myphnnum.invalid">
                                     <b>*please enter a number</b>
                                 </div>
@@ -40,9 +41,9 @@
                             <br>
                             <div class="col">
                                 <label><b>Email address</b></label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="abc@gmail.com"
-                                    aria-describedby="emailHelp" ngModel email="true" name="email" #myemail="ngModel"
-                                    required>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    placeholder="abc@gmail.com" aria-describedby="emailHelp" ngModel email="true"
+                                    name="email" #myemail="ngModel" required>
                                 <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
                                     <b>*please enter a valid email</b>
                                 </div>
@@ -54,22 +55,22 @@
 
                         <div class="row g-3">
                             <div class="col">
-                                <label><b>City</b></label>
-                                <input type="text" class="form-control" placeholder="Bangalore" aria-label="city"
-                                    ngModel name="city" #city="ngModel" required>
+                                <label><b>From</b></label>
+                                <input type="text" class="form-control" placeholder="Bangalore" aria-label="from"
+                                    ngModel name="from" #from="ngModel" required>
 
-                                <div class="text-danger" *ngIf="city.touched && city.invalid">
+                                <div class="text-danger" *ngIf="from.touched && from.invalid">
                                     <b>*please enter a city</b>
                                 </div>
 
                             </div>
 
                             <div class="col">
-                                <label><b>Hotel Name</b></label>
-                                <input type="text" class="form-control" placeholder="Four Season Hotel"
-                                    aria-label="hotelname" ngModel name="hotelname" #hotelname="ngModel" required>
+                                <label><b>To</b></label>
+                                <input type="text" class="form-control" placeholder="Mysore" aria-label="to" ngModel
+                                    name="to" #to="ngModel" required>
 
-                                <div class="text-danger" *ngIf="hotelname.touched && hotelname.invalid">
+                                <div class="text-danger" *ngIf="to.touched && to.invalid">
                                     <b>*please enter a city</b>
                                 </div>
 
@@ -83,18 +84,38 @@
 
                         <div class="row g-3">
                             <div class="col">
-                                <label><b>Checkin</b></label>
-                                <input type="date" class="form-control" aria-label="checkin" ngModel name="checkin"
+                                <label><b>Departure</b></label>
+                                <input type="date" class="form-control" aria-label="checkin" ngModel name="departure"
                                     #checkin="ngModel" required>
                             </div>
 
                             <div class="col">
-                                <label><b>CHECK-OUT</b></label>
-                                <input type="date" class="form-control" aria-label="checkout" ngModel name="checkout"
+                                <label><b>Return</b></label>
+                                <input type="date" class="form-control" aria-label="checkout" ngModel name="return"
                                     #checkout="ngModel" required>
                             </div>
                         </div>
 
+                    </div>
+
+                    <br>
+                    <div class="mb-3">
+
+                        <div class="row g-3">
+                            <div class="col">
+                                <label><b>Pick-Time</b></label>
+                                <input type="time" class="form-control" aria-label="checkin" ngModel name="picktime"
+                                    #checkin="ngModel" required>
+                            </div>
+
+                            <div class="col">
+                                <label><b>Drop-Time</b></label>
+                                <input type="time" class="form-control" aria-label="checkout" ngModel name="droptime"
+                                    #checkout="ngModel" required>
+                            </div>
+                        </div>
+                        <!-- <input type="time" id="time">
+                        <button onclick="print()">Submit</button> -->
                     </div>
 
                     <br>

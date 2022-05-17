@@ -255,9 +255,9 @@ router.get('/busclick', function (req, res, next) {
 });
 
 //get user details
-router.delete('/signup/:firstname', (req, res, next) => {
-  let firstname = req.params.firstname;
-  let deleteq = `DELETE FROM signup WHERE firstname = '${firstname}'`;
+router.delete('/signup/:email', (req, res, next) => {
+  let email = req.params.email;
+  let deleteq = `DELETE FROM flight_booking  WHERE email ='nandu@gmail.com'`;
 
   dbConnection.query(deleteq, (error, result, fields) => {
     if (error) {
@@ -266,7 +266,7 @@ router.delete('/signup/:firstname', (req, res, next) => {
     } else {
       console.log(result);
       if (result.affectedRows) {
-        res.send(`${firstname} has been deleted`)
+        res.send(`${email} has been deleted`)
       } else {
         res.send(`Unable to delete user, Not Found`);
       }

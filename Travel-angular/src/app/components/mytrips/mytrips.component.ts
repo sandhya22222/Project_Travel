@@ -6,6 +6,7 @@ import { FlightdetailsComponent } from 'src/app/routing/flightdetails/flightdeta
 import { BusdetailsComponent } from 'src/app/routing/busdetails/busdetails.component';
 import { HoteldetailsComponent } from 'src/app/routing/hoteldetails/hoteldetails.component';
 
+
 @Component({
   selector: 'app-mytrips',
   templateUrl: './mytrips.component.html',
@@ -20,10 +21,10 @@ export class MytripsComponent implements OnInit {
   public getemail: any;
   userList: any;
   loggedIn: any;
-  user: any;
+  trainUser: any;
   busUser: any;
   hotelUser: any;
- 
+
   constructor(private profile: ListService, private myDilog: MatDialog) {
 
   }
@@ -34,32 +35,31 @@ export class MytripsComponent implements OnInit {
     this.profile.getFlightsList(this.getemail).subscribe((result: any) => {
       this.userList = result;
       console.log(result)
-    })
+    });
 
 
     this.profile.getTrainsList(this.getemail).subscribe((result: any) => {
-      this.user = result;
+      this.trainUser = result;
       console.log(result)
-    })
+    });
 
     this.profile.getBusesList(this.getemail).subscribe((result: any) => {
       this.busUser = result;
       console.log(result)
-    })
+    });
 
     this.profile.getHotelList(this.getemail).subscribe((result: any) => {
       this.hotelUser = result;
       console.log(result)
-    })
-
+    });
   }
 
   openDialog() {
     const dilogref = this.myDilog
       .open(TraindetailsComponent, {
-        height: '600px',
-        width: '700px',
-        disableClose:true
+        height: '550px',
+        width: '550px',
+        disableClose: true
       });
 
 
@@ -72,9 +72,9 @@ export class MytripsComponent implements OnInit {
   openDialogFlight() {
     const dilogref1 = this.myDilog
       .open(FlightdetailsComponent, {
-        height: '600px',
-        width: '700px',
-        disableClose:true
+        height: '550px',
+        width: '550px',
+        disableClose: true
       });
 
     dilogref1.afterClosed().subscribe((result: any) => {
@@ -88,7 +88,7 @@ export class MytripsComponent implements OnInit {
       .open(BusdetailsComponent, {
         height: '600px',
         width: '700px',
-        disableClose:true
+        disableClose: true
       });
 
     dilogref1.afterClosed().subscribe((result: any) => {
@@ -102,7 +102,7 @@ export class MytripsComponent implements OnInit {
       .open(HoteldetailsComponent, {
         height: '600px',
         width: '700px',
-        disableClose:true
+        disableClose: true
       });
 
     dilogref1.afterClosed().subscribe((result: any) => {
@@ -110,6 +110,9 @@ export class MytripsComponent implements OnInit {
     })
 
   }
-  
-}
+    getCancel(){
+      alert('!! Due To Covid Reasons Cancellation Is Not Available !!')
+    }
+
+ }
 
