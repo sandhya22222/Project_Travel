@@ -1,73 +1,75 @@
 <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Travel-Backgrounds-Download-HD.jpg" width="100%"
     height="800px">
-<br><br><br><br>
 
-<div class="container border border-primary p-4 m-5">
-    <form #f="ngForm" novalidate>
-        <div class="form-group">
-            <!-- {{isUserAdded}}
+<body>
+
+    <div class="container border border-primary p-4 m-5">
+        <form #f="ngForm" novalidate>
+            <div class="form-group">
+                <!-- {{isUserAdded}}
             <div *ngIf="isUserAdded">
                 ***User has been added succesffuly***
             </div> -->
-            <div class="row g-3">
-                <div class="col">
-                    <label><b>First name</b></label>
-                    <input type="fname" class="form-control" placeholder="First name" aria-label="First name" ngModel
-                        name="fname" #myFname="ngModel" required>
-                    <div class="text-danger" *ngIf="myFname.touched && myFname.invalid">
-                        <b>*please enter a value</b>
+                <div class="row g-3">
+                    <div class="col">
+                        <label><b>First name</b></label>
+                        <input type="fname" class="form-control" placeholder="First name" aria-label="First name"
+                            ngModel name="fname" #myFname="ngModel" required>
+                        <div class="text-danger" *ngIf="myFname.touched && myFname.invalid">
+                            <b>*please enter a value</b>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label><b>Last name</b></label>
+                        <input type="lname" class="form-control" placeholder="Last name" aria-label="Last name" ngModel
+                            name="lname" #myLname="ngModel" required>
+                        <div class="text-danger" *ngIf="myLname.touched && myLname.invalid">
+                            <b>*please enter a value</b>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <label><b>Last name</b></label>
-                    <input type="lname" class="form-control" placeholder="Last name" aria-label="Last name" ngModel
-                        name="lname" #myLname="ngModel" required>
-                    <div class="text-danger" *ngIf="myLname.touched && myLname.invalid">
-                        <b>*please enter a value</b>
+                <br>
+                <div class="mb-3">
+                    <label><b>Phone Number</b></label>
+                    <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1"
+                        plcaholder="xxxxxxxxxx" ngModel name="phnnum" #myphnnum="ngModel" required>
+                    <div class="text-danger" *ngIf="myphnnum.touched && myphnnum.invalid">
+                        <b>*please enter a number</b>
                     </div>
                 </div>
-            </div>
-            <br>
-            <div class="mb-3">
-                <label><b>Phone Number</b></label>
-                <input type="Phone Number" class="form-control" id="exampleInputPhonenumber1" plcaholder="xxxxxxxxxx" ngModel name="phnnum"
-                    #myphnnum="ngModel" required>
-                <div class="text-danger" *ngIf="myphnnum.touched && myphnnum.invalid">
-                    <b>*please enter a number</b>
+                <div class="mb-3">
+                    <label><b>City</b></label>
+                    <input type="cities" class="form-control" id="exampleInputCity1" ngModel name="city"
+                        #mycity="ngModel" required>
+                    <div class="text-danger" *ngIf="mycity.touched && mycity.invalid">
+                        <b>*please enter a number</b>
+                    </div>
                 </div>
-            </div>
-            <div class="mb-3">
-                <label><b>City</b></label>
-                <input type="cities" class="form-control" id="exampleInputCity1" ngModel name="city" #mycity="ngModel"
-                    required>
-                <div class="text-danger" *ngIf="mycity.touched && mycity.invalid">
-                    <b>*please enter a number</b>
-                </div>
-            </div>
 
-            <!-- <div class="text-danger" *ngIf="mycity.touched && mycity.invalid">
+                <!-- <div class="text-danger" *ngIf="mycity.touched && mycity.invalid">
                 <b>*please enter a number</b>
             </div> -->
 
-            <br>
-            <div class="mb-3">
-                <label><b>Email address</b></label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="abc@gmail.com" aria-describedby="emailHelp" ngModel
-                    email="true" name="email" #myemail="ngModel" required>
-                <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
-                    <b>*please enter a valid email</b>
+                <br>
+                <div class="mb-3">
+                    <label><b>Email address</b></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="abc@gmail.com"
+                        aria-describedby="emailHelp" ngModel email="true" name="email" #myemail="ngModel" required>
+                    <div class="text-danger" *ngIf="myemail.touched && myemail.invalid">
+                        <b>*please enter a valid email</b>
+                    </div>
                 </div>
-            </div>
-            <div class="mb-3">
-                <label><b>Password</b></label>
-                <input type="password" class="form-control" id="exampleInputPassword1" ngModel name="password"
-                    minlength="6" #mypassword="ngModel" required>
-                <div class="text-danger" *ngIf="mypassword.touched && mypassword.invalid">
-                    <b>Password must be at least 6 characters long</b>
+                <div class="mb-3">
+                    <label><b>Password</b></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" ngModel name="password"
+                        minlength="6" #mypassword="ngModel" required>
+                    <div class="text-danger" *ngIf="mypassword.touched && mypassword.invalid">
+                        <b>Password must be at least 6 characters long</b>
+                    </div>
                 </div>
-            </div>
 
-            <a (click)="getFormsValue(f)" class="btn btn-primary" [routerLink]="['/Login']">Register</a>
-        </div>
-    </form>
-</div>
+                <a (click)="getFormsValue(f)" class="btn btn-primary" [routerLink]="['/Login']">Register</a>
+            </div>
+        </form>
+    </div>
+</body>
