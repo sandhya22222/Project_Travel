@@ -21,7 +21,31 @@ export class CabclickComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  getFormsValue(formRef: any) { }
+  getFormsValue(formRef: any) {
+    let data = {
+     
+      firstname: formRef.value.fname,
+      lastname: formRef.value.lname,
+      email: formRef.value.email,
+      phonenumber: formRef.value.phonenumber,
+      fromc: formRef.value.from,
+      toc: formRef.value.to,
+      departure: formRef.value.departure,
+      returnt: formRef.value.return,
+      pickup: formRef.value.picktime,
+      dropt: formRef.value.droptime,
+      rooms:formRef.value.rooms,
+      amount: this.calculateAmount,
+      
+    };
+
+    this.myhttp.post('/api/users/cabclick', data, { responseType: 'text' })
+      .subscribe(data => {
+        console.log(data);
+        this.isUserAdded = true;
+        formRef.form.reset();
+      });
+   }
 
   getAmount() {
 

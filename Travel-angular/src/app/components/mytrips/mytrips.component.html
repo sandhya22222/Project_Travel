@@ -34,7 +34,8 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary"
                                         (click)="openDialogFlight()">Details</button>
-                                    <button type="button" class="btn btn-danger" (click)="getCancel()">Cancellation</button>
+                                    <button type="button" class="btn btn-danger"
+                                    (click)="deleteUser(myel.email)">Cancellation</button>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +48,7 @@
                     <div class="card">
                         <div class="card" role="document" style="background-color: rgba(172, 255, 47, 0.779);">
                             <div class="modal-content">
-                                <div class="modal-header"  style="background-color: rgba(172, 255, 47, 0.779);">
+                                <div class="modal-header" style="background-color: rgba(172, 255, 47, 0.779);">
                                     <h3 class="modal-title" style="font-style:oblique ;">Train Tickets</h3>
                                 </div>
                                 <div class="modal-body">
@@ -64,14 +65,14 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary"
                                         (click)="openDialog()">Details</button>
-                                    <button type="button" class="btn btn-danger">Cancellation</button>
+                                    <button type="button" class="btn btn-danger" (click)="deleteUser(myele.lastname)">Cancellation</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
-<br>
+                <br>
                 <!-- buslist -->
 
                 <div *ngFor="let myele of busUser">
@@ -95,7 +96,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary"
                                         (click)="openDialogBus()">Details</button>
-                                    <button type="button" class="btn btn-danger">Cancellation</button>
+                                    <button type="button" class="btn btn-danger" (click)="deleteUser(myele.email)">Cancellation</button>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +104,7 @@
 
                 </div>
                 <!-- hotellist -->
-<br>
+                <br>
                 <div *ngFor="let myele of hotelUser">
                     <div class="card">
                         <div class="card" role="document" style="background-color: rgb(176, 73, 205);">
@@ -122,16 +123,46 @@
                                         <h4 style="padding-left:310px ; font-style: oblique;">{{myele.city}}</h4>
                                     </div>
                                 </div>
-                                <div class="modal-footer" >
+                                <div class="modal-footer">
                                     <button type="button" class="btn btn-primary"
                                         (click)="openDialogHotel()">Details</button>
-                                    <button type="button" class="btn btn-danger">Cancellation</button>
+                                    <button type="button" class="btn btn-danger" (click)="deleteUser(myele.email)">Cancellation</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //cablist -->
+                <br>
+                <div *ngFor="let myele of cabUser">
+                    <div class="card">
+                        <div class="card" role="document" style="background-color: rgb(176, 73, 205);">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color:rgb(176, 73, 205);">
+                                    <h3 class="modal-title" style="font-style:oblique ;">Cabs Bookings</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 style="padding-left:160px;font-style: oblique;">From</h3>
+                                    <br>
+                                    <h4 style="padding-left:150px ; font-style: oblique;">{{myele.fromc}}</h4>
+                                    <div class="container" style="padding-left:450px ; margin-top:-100px">
+                                        <img src="https://www.ixigo.com/rt-flight/pc/img/hotel-new.svg" width="100px">
+                                        <h3 style="padding-left:350px;font-style: oblique; margin-top:-100px">To</h3>
+                                        <br>
+                                        <h4 style="padding-left:330px ; font-style: oblique;">{{myele.toc}}</h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary"
+                                        (click)="openDialogCab()">Details</button>
+                                    <button type="button" class="btn btn-danger" (click)="deleteUser(myele.firstname)">Cancellation</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+            
             </div>
             <br>
             <!-- <div *ngIf="!userList.user">

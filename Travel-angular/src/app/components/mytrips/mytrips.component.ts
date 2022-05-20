@@ -5,6 +5,7 @@ import { TraindetailsComponent } from 'src/app/routing/traindetails/traindetails
 import { FlightdetailsComponent } from 'src/app/routing/flightdetails/flightdetails.component';
 import { BusdetailsComponent } from 'src/app/routing/busdetails/busdetails.component';
 import { HoteldetailsComponent } from 'src/app/routing/hoteldetails/hoteldetails.component';
+import { CabdetailsComponent } from 'src/app/routing/cabdetails/cabdetails.component';
 
 
 @Component({
@@ -24,6 +25,7 @@ export class MytripsComponent implements OnInit {
   trainUser: any;
   busUser: any;
   hotelUser: any;
+  cabUser: any;
 
   constructor(private profile: ListService, private myDilog: MatDialog) {
 
@@ -50,6 +52,11 @@ export class MytripsComponent implements OnInit {
 
     this.profile.getHotelList(this.getemail).subscribe((result: any) => {
       this.hotelUser = result;
+      console.log(result)
+    });
+
+    this.profile.getCabList(this.getemail).subscribe((result: any) => {
+      this.cabUser = result;
       console.log(result)
     });
   }
@@ -110,9 +117,29 @@ export class MytripsComponent implements OnInit {
     })
 
   }
-    getCancel(){
-      alert('!! Due To Covid Reasons Cancellation Is Not Available !!')
-    }
 
- }
+
+  openDialogCab() {
+    const dilogref1 = this.myDilog
+      .open(CabdetailsComponent, {
+        height: '650px',
+        width: '600px',
+        disableClose: true
+      });
+
+    dilogref1.afterClosed().subscribe((result: any) => {
+      console.log(`Dialog result ${result}`);
+    })
+
+  }
+
+    // getCancel(){
+    //   alert('!! Due To Covid Reasons Cancellation Is Not Available !!')
+    // }
+
+    deleteUser(email: any) {
+      this.profile.deleteUser(email).subscribe();
+    };
+
+  }
 

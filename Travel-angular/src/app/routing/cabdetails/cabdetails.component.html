@@ -1,0 +1,87 @@
+<div class="container" *ngFor="let myel of cabUser">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class=" p-3 m-3 col-9">
+            <div>
+                <div class="row g-3">
+                    <div class="col">
+                        <label><b>First Name</b></label>
+                        <h5>{{myel.firstname}}</h5>
+                    </div>
+                    <div class="col">
+                        <label><b>Last Name</b></label>
+                        <h5>{{myel.lastname}}</h5>
+                    </div>
+                </div>
+                <br>
+                <div class="row g-3">
+                    <div class="col">
+                        <label><b>Email</b></label>
+                        <h5>{{myel.email}}</h5>
+                    </div>
+                    <div class="col">
+                        <label><b>Phone Number</b></label>
+                        <h5>{{myel.phonenumber}}</h5>
+                    </div>
+                </div>
+                <br>
+                <div class="row g-3">
+                    <div class="col">
+                        <label><b>From</b></label>
+                        <h5>{{myel.fromc}}</h5>
+                    </div>
+                    <div class="col">
+                        <label><b>To</b></label>
+                        <h5>{{myel.toc}}</h5>
+                    </div>
+                </div>
+                <br>
+                <div class="row g-3">
+                    <div class="col">
+                        <label><b>Departure</b></label>
+                        <h5>{{myel.departure}}</h5>
+                    </div>
+                    <div class="col">
+                        <label><b>Return</b></label>
+                        <h5>{{myel.returnt}}</h5>
+                    </div>
+                </div>
+                <br>
+                <div class="row g-3">
+                    <div class="col">
+                        <label><b>Pick-up Time</b></label>
+                        <h5>{{myel.pickup}}</h5>
+                    </div>
+                    <div class="col"> 
+                        <label><b>Drop Time</b></label>
+                        <h5>{{myel.dropt}}</h5>
+                    </div>
+                </div>
+                <br>
+                <div class="row g-3">
+                    <div class="col">
+                        <label><b>Rooms</b></label>
+                        <h5>{{myel.rooms}}</h5>
+                    </div>
+                    <div class="col">
+                        <label><b>Amount</b></label>
+                        <h5>{{myel.amount}}</h5>
+                    </div>
+                </div>
+
+                <br><br>
+                <div class="row g-3">
+                    <div class="col">
+                        <a class="btn btn-success" (click)="getPrint()">Print</a>
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-primary" mat-dialog-close>Cancel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <br><br>
+
+    </div>
+</div>

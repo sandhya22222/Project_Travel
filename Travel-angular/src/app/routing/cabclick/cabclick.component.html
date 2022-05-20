@@ -102,20 +102,33 @@
                     <div class="mb-3">
 
                         <div class="row g-3">
-                            <div class="col">
+                            <div class="col ngx-timepicker-field-example">
                                 <label><b>Pick-Time</b></label>
-                                <input type="time" class="form-control" aria-label="checkin" ngModel name="picktime"
-                                    #checkin="ngModel" required>
+                                <!-- <input type="time" class="form-control" aria-label="checkin" ngModel name="picktime"
+                                    #checkin="ngModel" required> -->
+                                <ngx-timepicker-field type="time" class="form-control" aria-label="checkin" ngModel
+                                    name="picktime" #checkin="ngModel" required [defaultTime]="'11:11 am'">
+                                </ngx-timepicker-field>
                             </div>
+
+                            <!-- <div class="ngx-timepicker-field-example">
+                                <ngx-timepicker-field [defaultTime]="'11:11 am'"></ngx-timepicker-field>
+                            </div> -->
 
                             <div class="col">
                                 <label><b>Drop-Time</b></label>
-                                <input type="time" class="form-control" aria-label="checkout" ngModel name="droptime"
-                                    #checkout="ngModel" required>
+                                <!-- <input type="time" class="form-control" aria-label="checkout" ngModel name="droptime"
+                                    #checkout="ngModel" required> -->
+                                <ngx-timepicker-field type="time" class="form-control" aria-label="checkin" ngModel
+                                    name="droptime" #checkin="ngModel" require [defaultTime]="'11:11 am'">
+                                </ngx-timepicker-field>
+
                             </div>
                         </div>
-                        <!-- <input type="time" id="time">
-                        <button onclick="print()">Submit</button> -->
+                        <!-- <div class="default-time-example">
+                            <input aria-label="default time" [ngxTimepicker]="defaultValue" [value]="'05:11 pm'"  readonly>
+                            <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
+                       </div> -->
                     </div>
 
                     <br>
@@ -138,11 +151,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="col">
-                            <label><b>Booking on</b></label>
-                            <input type="date" class="form-control" aria-label="First name" ngModel name="date"
-                                #myFname="ngModel" required>
-                        </div> -->
 
                     </div>
                     <br>
@@ -199,4 +207,3 @@
         <div class="col-3"></div>
     </div>
 </div>
-<br><br><br><br>

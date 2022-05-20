@@ -38,7 +38,8 @@ import { FlightdetailsComponent } from './routing/flightdetails/flightdetails.co
 import { BusdetailsComponent } from './routing/busdetails/busdetails.component';
 import { HoteldetailsComponent } from './routing/hoteldetails/hoteldetails.component';
 import { CabclickComponent } from './routing/cabclick/cabclick.component';
-
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { CabdetailsComponent } from './routing/cabdetails/cabdetails.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { CabclickComponent } from './routing/cabclick/cabclick.component';
     FlightdetailsComponent,
     BusdetailsComponent,
     HoteldetailsComponent,
-    CabclickComponent
+    CabclickComponent,
+    CabdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +83,7 @@ import { CabclickComponent } from './routing/cabclick/cabclick.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
+    NgxMaterialTimepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

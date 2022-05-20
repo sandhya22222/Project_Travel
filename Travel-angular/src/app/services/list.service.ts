@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-const baseUrl = 'http://localhost:4200/api/users/mytrips/:email';
+// const baseUrl = 'http://localhost:4200/api/users/mytrips/:email';
 
 
 @Injectable({
@@ -10,9 +10,6 @@ export class ListService {
 
   constructor(private myHttp: HttpClient) { }
 
-  // delete(firstname:any) {
-  //   return this.myHttp.delete(`${baseUrl}/${firstname}`);
-  // }
 
   getFlightsList(email: string) {
     let queryOptions = {
@@ -50,10 +47,18 @@ export class ListService {
     return this.myHttp.get('http://localhost:4200/api/users/hotelclick', queryOptions)
   }
 
+  getCabList(email: string) {
+    let queryOptions = {
 
- deleteOne(email:string){
-   return this.myHttp.delete(`${baseUrl}/${email}`)
-  
- }
+      params: new HttpParams().set('email', email)
+
+    };
+    return this.myHttp.get('http://localhost:4200/api/users/cabclick', queryOptions)
+  }
+
+
+  deleteUser(userid:any) {
+    return this.myHttp.delete(`api/users/mytrips/${userid}`);
+  };
 
 }

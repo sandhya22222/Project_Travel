@@ -107,7 +107,6 @@ router.post('/flightclick', function (req, res, next) {
 //busclick list
 router.post('/busclick', function (req, res, next) {
   let {
-
     firstname,
     lastname,
     email,
@@ -159,6 +158,36 @@ router.post('/trainclick', function (req, res, next) {
             (firstname,lastname, email,phonenumber,fromc, toc, passengers,amount,date)
              VALUES ('${firstname}','${lastname}','${email}','${phonenumber}',
              '${fromc}','${toc}','${passengers}', ${amount},'${date}')`;
+
+  dbConnection.query(insert_query, (error, result, fields) => {
+
+    if (error) {
+      res.send(error);
+      throw error;
+    } else {
+      console.log(result);
+      res.send('user profile added successfully');
+    }
+  });
+
+});
+
+//cabclick list
+
+router.post('/cabclick', function (req, res, next) {
+  let {
+    firstname, lastname, email, phonenumber,
+    fromc,
+    toc,
+    departure,
+    returnt,
+    pickup,
+    dropt,
+    rooms,
+    amount
+  } = req.body  // destructing of object property 
+  let insert_query = `INSERT INTO cabs_booking (firstname,lastname, email,phonenumber,fromc,toc,departure,returnt,pickup,dropt,rooms,amount)
+             VALUES ('${firstname}','${lastname}','${email}','${phonenumber}','${fromc}','${toc}','${departure}','${returnt}','${pickup}','${dropt}','${rooms}', ${amount})`;
 
   dbConnection.query(insert_query, (error, result, fields) => {
 
@@ -242,7 +271,7 @@ router.get('/hotelclick', function (req, res, next) {
 });
 
 //buslist
- 
+
 router.get('/busclick', function (req, res, next) {
   let email = req.query.email;
   console.log(email)
@@ -254,24 +283,58 @@ router.get('/busclick', function (req, res, next) {
   })
 });
 
-//get user details
-router.delete('/signup/:email', (req, res, next) => {
-  let email = req.params.email;
-  let deleteq = `DELETE FROM flight_booking  WHERE email ='nandu@gmail.com'`;
+//cabclick
 
-  dbConnection.query(deleteq, (error, result, fields) => {
+router.get('/cabclick', function (req, res, next) {
+  let email = req.query.email;
+  console.log(email)
+  let selectQuery = `select * from cabs_booking WHERE email ='${email}'`;
+  dbConnection.query(selectQuery, (error, results, fields) => {
+    if (error) throw error;
+    res.send(results)
+
+  })
+});
+
+//get user details
+router.delete('/mytrips/:userId', (req, res, next) => {
+  console.log(req.params.userId)
+  let userId = req.params.userId;
+  let deleletq = `DELETE FROM flight_booking WHERE email = '${userId}'`;
+   dbConnection.query(deleletq, (error, result, fields) => {
     if (error) {
       res.send(error);
       throw error;
     } else {
       console.log(result);
       if (result.affectedRows) {
-        res.send(`${email} has been deleted`)
+        res.send(`${userId} has been delete`)
       } else {
         res.send(`Unable to delete user, Not Found`);
       }
     }
   });
-
 });
+
+router.delete('/mytrips/:userId', (req, res, next) => {
+  console.log(req.params.userId)
+  let userId = req.params.userId;
+  let deleletq = `DELETE FROM hotel_booking WHERE email = '${userId}'`;
+   dbConnection.query(deleletq, (error, result, fields) => {
+    if (error) {
+      res.send(error);
+      throw error;
+    } else {
+      console.log(result);
+      if (result.affectedRows) {
+        res.send(`${userId} has been delete`)
+      } else {
+        res.send(`Unable to delete user, Not Found`);
+      }
+    }
+  });
+});
+
+
+
 module.exports = router;

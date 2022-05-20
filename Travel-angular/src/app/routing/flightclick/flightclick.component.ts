@@ -22,11 +22,7 @@ export class FlightclickComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    // this.signService.getFlightlist().subscribe((result:any)=>{
-    //   this.userList=result
-    //   console.log(result)
-    //  })
-  }
+  } 
 
   getFormsValue(formRef: any) {
 
@@ -51,10 +47,6 @@ export class FlightclickComponent implements OnInit {
       });
   }
 
-
-  // getValues() {
-  //    alert("Payment done successfully")
-  // }
   getAmount() {
 
     this.isGetAmtClicked = true;
