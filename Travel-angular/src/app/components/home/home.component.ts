@@ -14,14 +14,14 @@ export class HomeComponent implements OnInit {
    href:'/flights/search?from=New%20Delhi&to=Goa'
   },
   {
-    text:'Valid till:Valid Till 12th April',
+    text:'Valid till:Valid Till 12th July',
     content: 'New Flights: Port Blair, Kolkata and Chennai ',
     btnText: 'Book Now!',
     image: 'https://gos3.ibcdn.com/offers-640X268-1646049604.jpg',
    href:'/flights/search?from=Mumbai&to=Chennai'
   },
   {
-    text:'Valid till:Valid Till 31th May',
+    text:'Valid till:Valid Till 31th June',
     content: 'Up to Rs.5000 OFF + Extra Rs. 5000 OFF* with leading banks.',
     btnText: 'Book Now!',
     image: 'https://gos3.ibcdn.com/offers-1648917885.jpg',
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
 
   },
   {
-    text:'Valid till:Valid Till 15th April',
+    text:'Valid till:Valid Till 15th July',
     content: 'Up To 25% OFF on Select Int’l Flights',
     btnText: 'Book Now!',
     image: 'https://gos3.ibcdn.com/offers-640X268-1649058606.jpg',
