@@ -21,10 +21,11 @@ export class HomeComponent implements OnInit {
    href:'/flights/search?from=Mumbai&to=Chennai'
   },
   {
-    text:'Valid till:Valid Till 25th May',
+    text:'Valid till:Valid Till 31th May',
     content: 'Up to Rs.5000 OFF + Extra Rs. 5000 OFF* with leading banks.',
     btnText: 'Book Now!',
     image: 'https://gos3.ibcdn.com/offers-1648917885.jpg',
+    href:'/flights/search?from=New%20Delhi&to=Goa'
 
   },
   {
@@ -32,6 +33,7 @@ export class HomeComponent implements OnInit {
     content: 'Up To 25% OFF on Select Int’l Flights',
     btnText: 'Book Now!',
     image: 'https://gos3.ibcdn.com/offers-640X268-1649058606.jpg',
+    href:'/flights/search?from=New%20Delhi&to=Goa'
 
   },
   ];
